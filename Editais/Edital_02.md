@@ -5,9 +5,9 @@
 <div style= "align: top;">
 
 <!-- <span style="float: left;">
-<img src="../../../figs_gerais/Universidade_SENAI_CIMATEC.png" width="150"> -->
+<img src="../../../figs_gerais/Universidade_SENAI_CIMATEC.png" width="150"> 
 
-</span>
+</span> -->
 <span style="float: center;"><br>
 UNIVERSIDADE FEDERAL DA BAHIA <br>
 FACULDADE DE ARQUITETURA | CURSO DE ARQUITETURA E URBANISMO
