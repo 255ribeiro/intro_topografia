@@ -44,6 +44,7 @@ Orientações gerais
 
 A atividade consiste na definição de platôs construtivos e das estratégias de estabilização de terreno adequadas.
 
+
 <h4 style="background:Silver; text-align: center;">
 Diretrizes da atividade
 </h4>
