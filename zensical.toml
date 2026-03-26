@@ -15,7 +15,7 @@ Copyright &copy; 2026 The authors
 """
 
 nav = [
-  { "Get started" = "index.md" },
+  { "Home" = "index.md" },
   {"Informações geográficas de salvador"="ssa_geo/ssa_geo.md"},
   # Qgis
   {"Qgis" = [
