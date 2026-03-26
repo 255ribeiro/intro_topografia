@@ -1,6 +1,6 @@
 [project]
 
-site_name = "Introdução à Topografia"
+site_name = "Introdução ao SIG e Topografia"
 site_url = "https://255ribeiro.github.io/intro_topografia/"
 
 repo_url = "https://github.com/255ribeiro/intro_topografia"
@@ -27,8 +27,9 @@ nav = [
     {"Sistema UTM" = "gis/utm_proj.md"},
     {"Sobre o Datum" = "gis/datum_sirgas_utm.md"},
     {"Georreferenciamento" = "gis/georreferenciamento.md"},
+    {"Sites com geográficas de Salvador"="ssa_geo/ssa_geo.md"},
   ]},
-  {"Sites com geográficas de Salvador"="ssa_geo/ssa_geo.md"},
+  
 
   # Qgis
   {"Qgis" = [
