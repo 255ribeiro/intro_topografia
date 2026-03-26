@@ -60,6 +60,8 @@ features = [
     "toc.follow",
 ]
 
+[project.theme.icon]
+logo = "fontawesome/solid/globe"
 
 [[project.theme.palette]]
 scheme = "default"
@@ -73,8 +75,11 @@ toggle.name = "Switch to light mode"
 
 
 [project.markdown_extensions]
-    [project.markdown_extensions.toc]
-    toc_depth = 1
+attr_list = {}
+md_in_html = {}
+pymdownx.blocks.caption = {}
+[project.markdown_extensions.toc]
+toc_depth = 1
 
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
@@ -96,5 +101,5 @@ name = "youtube"
 
 [[project.extra.social]]
 icon = "fontawesome/solid/envelope"
-link = "ffribeiro@gmail.com"
+link = "mailto:ffribeiro@gmail.com"
 name = "Email"
