@@ -1,8 +1,10 @@
 # Introdução ao Qgis
 
-[Tutorial em vídeo - aquisição de dados urbanos de Salvador](https://www.youtube.com/watch?v=E5oui9HujCo&list=PLdvIeM1XzOJD2vrax4LrkqgRYhkU8hL58)
+Essa é uma introdução ao Qgis focando na obtenção de dados geoespaciais de Salvador, Ba.
 
-[Playlist das aulas Gravadas](https://www.youtube.com/watch?v=bz2w0AJURKE&list=PLdvIeM1XzOJAp-ohliu_Wa5CuupuiKrAx)
+<!-- [Tutorial em vídeo - aquisição de dados urbanos de Salvador](https://www.youtube.com/watch?v=E5oui9HujCo&list=PLdvIeM1XzOJD2vrax4LrkqgRYhkU8hL58)
+
+[Playlist das aulas Gravadas](https://www.youtube.com/watch?v=bz2w0AJURKE&list=PLdvIeM1XzOJAp-ohliu_Wa5CuupuiKrAx) -->
 
 ## O que é o QGIS?
 
