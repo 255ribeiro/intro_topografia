@@ -78,6 +78,7 @@ toggle.name = "Switch to light mode"
 attr_list = {}
 md_in_html = {}
 pymdownx.blocks.caption = {}
+
 [project.markdown_extensions.toc]
 toc_depth = 1
 
