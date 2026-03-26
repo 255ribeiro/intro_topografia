@@ -7,6 +7,8 @@ Os dados geográficos podem ser classificados em dois tipos principais: **vetori
 - **Dados Vetoriais**: Representam feições geográficas como pontos, linhas e polígonos. São ideais para representar limites, redes e locais específicos. Exemplos incluem shapefiles (.shp) e GeoJSON.
 - **Dados Raster**: Consistem em uma grade de células (pixels) com valores atribuídos. São usados para representar fenômenos contínuos, como elevação, temperatura ou imagens de satélite. Exemplos incluem arquivos TIFF e JPEG.
 
+Em ambos os casos os dados devem estar atrelados à algum sistema de coordenadas de referência. Os sistema de coordenadas de referências se dividem em Geográficos e projetados, sendo o sistema UTM o mais utilizado dentre os sistemas projetados.
+
 ## Coordenadas Geográficas
 
 As coordenadas geográficas são usadas para localizar pontos na superfície da Terra usando latitude e longitude. A latitude mede a posição norte-sul (de -90° a +90°), enquanto a longitude mede a posição leste-oeste (de -180° a +180°). Esse sistema é baseado no elipsoide de referência e é fundamental para a cartografia global.
