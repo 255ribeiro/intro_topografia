@@ -20,7 +20,13 @@ Copyright &copy; 2026 The authors
 
 nav = [
   {"Home" = "index.md" },
+  {"GIS - Introdução" = "gis/introducao_gis.md"},
+  {"Sistemas de projeção" = "gis/coord_sys.md"},
+  {"Sobre o Datum" = "gis/datum_sirgas_utm.md"},
+  {"Georreferenciamento" = "gis/georreferenciamento.md"},
   {"Sites com geográficas de Salvador"="ssa_geo/ssa_geo.md"},
+
+  # Qgis
   {"Qgis" = [
     {"Introdução" = "qgis/qgis.md"},
     {"Interface" = "qgis/qgis_interface.md"},
@@ -29,6 +35,8 @@ nav = [
     {"Recortar camada" = "qgis/qgis_recorte_shape.md"},
     {"Video Playlists" = "qgis/qgis_playlists.md"},
   ]},
+
+# Qgis
 #   {"Editais" = [
 #     {"Edital Avaliação 01" = "Editais/edital_av1.md"},
 #     {"Edital Avaliação 02" = "Editais/edital_av2_2025.md"},
