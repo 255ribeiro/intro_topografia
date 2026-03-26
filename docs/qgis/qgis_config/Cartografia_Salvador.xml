@@ -1,0 +1,16 @@
+<!DOCTYPE connections>
+<qgsWFSConnections version="1.1">
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/cbge" invertAxisOrientation="0" username="" name="PMS - Classes Base do Mapeamento Topográfico: - CBGE"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/laz" invertAxisOrientation="0" username="" name="PMS - Cultura e Lazer"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/edf" invertAxisOrientation="0" username="" name="PMS - Edificação"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/enc" invertAxisOrientation="0" username="" name="PMS - Energia e Comunicações"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/emu" invertAxisOrientation="0" username="" name="PMS - Estrutura de Urbana"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/hid" invertAxisOrientation="0" username="" name="PMS - Hidrografia"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/rel" invertAxisOrientation="0" username="" name="PMS - Relevo"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/tra" invertAxisOrientation="0" username="" name="PMS - Sistema de Transporte"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/aer" invertAxisOrientation="0" username="" name="PMS - Sistema de Transporte Aeroportuário"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/dut" invertAxisOrientation="0" username="" name="PMS - Sistema de Transporte Dutos"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/fer" invertAxisOrientation="0" username="" name="PMS - Sistema de Transporte Ferroviário"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/hdv" invertAxisOrientation="0" username="" name="PMS - Sistema de Transporte Hidroviário"/>
+    <wfs ignoreAxisOrientation="0" version="auto" maxnumfeatures="" pagesize="" pagingenabled="1" password="" url="https://mapeamento.salvador.ba.gov.br/ver" invertAxisOrientation="0" username="" name="PMS - Área Verde"/>
+</qgsWFSConnections>

@@ -1,0 +1,8 @@
+<!DOCTYPE connections>
+<qgsXYZTilesConnections version="1.0" xmlns:http-header="https://qgis.org/http-header">
+    <xyztiles password="" tilePixelRatio="0" zmax="18" referer="" url="https://mt1.google.com/vt/lyrs=h&amp;x={x}&amp;y={y}&amp;z={z}" zmin="0" name="Google Roads" http-header:referer="" authcfg="" username=""/>
+    <xyztiles password="" tilePixelRatio="0" zmax="18" referer="" url="https://mt1.google.com/vt/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}" zmin="0" name="Google Satellite Hybrid" http-header:referer="" authcfg="" username=""/>
+    <xyztiles password="" tilePixelRatio="0" zmax="18" referer="" url="https://mt1.google.com/vt/lyrs=p&amp;x={x}&amp;y={y}&amp;z={z}" zmin="0" name="Google Terrain" http-header:referer="" authcfg="" username=""/>
+    <xyztiles password="" tilePixelRatio="0" zmax="18" referer="" url="https://mt1.google.com/vt/lyrs=r&amp;x={x}&amp;y={y}&amp;z={z}" zmin="0" name="Google maps" http-header:referer="" authcfg="" username=""/>
+    <xyztiles password="" tilePixelRatio="0" zmax="18" referer="" url="http://www.google.cn/maps/vt?lyrs=s@189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}" zmin="0" name="Google satelite" http-header:referer="" authcfg="" username=""/>
+</qgsXYZTilesConnections>

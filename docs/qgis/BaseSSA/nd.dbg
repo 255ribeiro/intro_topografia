@@ -1,0 +1,17 @@
+A operação foi concluída com êxito.
+------------------- TRACEBACK -------------------------
+Module "RMod " Message   0: file ".\err.c   " line 645
+Module "Msw  " Message   0: file ".\msw.c   " line 493
+Module "Icon " Message   1: file ".\icon.c  " line 660
+Module "Err  " Message  -1: file ".\err.c   " line 2009
+-------------------------------------------------------
+A operação foi concluída com êxito.
+------------------- TRACEBACK -------------------------
+Module "Msw  " Message   0: file ".\msw.c   " line 493
+Module "Icon " Message   1: file ".\icon.c  " line 660
+Module "RMod " Message   0: file ".\err.c   " line 645
+Module "Msw  " Message   0: file ".\msw.c   " line 493
+Module "Icon " Message   1: file ".\icon.c  " line 660
+Module "Err  " Message  -1: file ".\err.c   " line 2009
+-------------------------------------------------------
+FATAL ERROR     Failure during error recovery
