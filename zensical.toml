@@ -22,11 +22,11 @@ nav = [
   {"Home" = "index.md" },
   {"GIS" = [
     {"GIS - Introdução" = "gis/introducao_gis.md"},
+    {"Tipos de dados usados" = "gis/tipo_dados_gis.md"},
     {"Sistemas de Coordenadas" = "gis/coord_sys.md"},
-    {"Sistemas de Projeção Geográfica" = "gis/sys_geo_proj.md"},
-    {"Sistema UTM" = "gis/utm_proj.md"},
-    {"Sobre o Datum" = "gis/datum_sirgas_utm.md"},
+    {"Sistemas de Coordenadas projetados" = "gis/sys_proj.md"},
     {"Georreferenciamento" = "gis/georreferenciamento.md"},
+    {"Sobre o Datum" = "gis/datum_sirgas_utm.md"},
     {"Sites com geográficas de Salvador"="ssa_geo/ssa_geo.md"},
   ]},
   
@@ -101,6 +101,15 @@ toggle.name = "Switch to light mode"
 attr_list = {}
 md_in_html = {}
 pymdownx.blocks.caption = {}
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
 
 [project.markdown_extensions.toc]
 toc_depth = 1

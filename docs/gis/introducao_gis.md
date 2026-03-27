@@ -20,9 +20,12 @@ Um SIG é composto por cinco componentes principais:
 
 ## História e Evolução do SIG
 
-O conceito de SIG surgiu na década de 1960 nos Estados Unidos e Canadá, com o desenvolvimento de sistemas computadorizados para análise espacial. O primeiro SIG moderno foi criado em 1963 pelo Dr. Roger Tomlinson, conhecido como o "pai do SIG", para o governo canadense.
+Um dos primeiros exemplos de análise espacial aplicada à saúde pública foi o trabalho do médico britânico John Snow em 1854. Durante a epidemia de cólera em Londres, Snow mapeou os casos de doença e identificou a bomba de água na Broad Street como a fonte da contaminação, removendo a alça da bomba e interrompendo a propagação. Esse caso é considerado um precursor dos Sistemas de Informação Geográfica, demonstrando o poder da análise espacial para resolver problemas reais.
+
+O conceito moderno de SIG surgiu na década de 1960 nos Estados Unidos e Canadá, com o desenvolvimento de sistemas computadorizados para análise espacial. O primeiro SIG moderno foi criado em 1963 pelo Dr. Roger Tomlinson, conhecido como o "pai do SIG", para o governo canadense.
 
 Desde então, o SIG evoluiu rapidamente:
+
 - **Década de 1970**: Desenvolvimento de softwares comerciais e acadêmicos.
 - **Década de 1980**: Popularização com o advento de computadores pessoais.
 - **Década de 1990**: Integração com internet e bancos de dados relacionais.
