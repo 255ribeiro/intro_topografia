@@ -25,11 +25,12 @@ nav = [
     {"Tipos de dados usados" = "gis/tipo_dados_gis.md"},
     {"Sistemas de Coordenadas" = "gis/coord_sys.md"},
     {"Sistemas de Coordenadas projetados" = "gis/sys_proj.md"},
-    {"Georreferenciamento" = "gis/georreferenciamento.md"},
     {"Definição de um sistema de coordenadas" = "gis/datum_sirgas_utm.md"},
-    {"Sites com geográficas de Salvador"="ssa_geo/ssa_geo.md"},
+    {"Georreferenciamento" = "gis/georreferenciamento.md"},
+    
   ]},
   
+  {"Sites com informações geográficas de Salvador"="ssa_geo/ssa_geo.md"},
 
   # Qgis
   {"Qgis" = [
