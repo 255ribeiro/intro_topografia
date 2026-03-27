@@ -26,7 +26,7 @@ nav = [
     {"Sistemas de Coordenadas" = "gis/coord_sys.md"},
     {"Sistemas de Coordenadas projetados" = "gis/sys_proj.md"},
     {"Georreferenciamento" = "gis/georreferenciamento.md"},
-    {"Sobre o Datum" = "gis/datum_sirgas_utm.md"},
+    {"Definição de um sistema de coordenadas" = "gis/datum_sirgas_utm.md"},
     {"Sites com geográficas de Salvador"="ssa_geo/ssa_geo.md"},
   ]},
   
