@@ -10,7 +10,7 @@ Em Sistemas de Informação Geográfica (SIG), um datum é um conjunto de parâm
 
 Para definir um sistema de coordenadas de forma precisa e interoperável, é necessário um conjunto de informações que incluem o datum de referência, o elipsoide usado, o meridiano principal, o método de projeção (se aplicável), os parâmetros da conversão, o sistema de coordenadas (cartesianas ou elipsoidais), as unidades e a área de validade. A representação Well-Known Text (WKT) é um padrão internacional para estruturar e representar essas informações de maneira legível por máquinas e humanos. A definição WKT do SIRGAS 2000 / UTM Zone 24S (EPSG:31984) apresentada abaixo é um exemplo prático dessas informações e de como elas são organizadas:
 
-```
+```shell
 PROJCRS["SIRGAS 2000 / UTM zone 24S",
     BASEGEODCRS["SIRGAS 2000",
         DATUM["Sistema de Referencia Geocentrico para las Americas 2000",
@@ -146,7 +146,7 @@ O uso (usage) especifica a área de aplicação válida do sistema, incluindo bo
 
 O EPSG:4674 é o sistema geográfico correspondente ao SIRGAS 2000. A estrutura do WKT para sistemas geográficos é mais simples, sem projeção.
 
-```
+```shell
 GEODCRS["SIRGAS 2000",
     DATUM["Sistema de Referencia Geocentrico para las Americas 2000",
         ELLIPSOID["GRS 1980",6378137,298.257222101,
