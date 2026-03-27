@@ -65,6 +65,15 @@ graph TD
     A --> F[CONVERSION<br/>Conversão/Projeção]
     A --> G[CS<br/>Sistema de Coordenadas]
     A --> H[USAGE<br/>Área de Uso]
+    classDef limeBox fill:#cddc39,stroke:#D96868,stroke-width:8px;
+    A:::limeBox
+    B:::limeBox
+    C:::limeBox
+    D:::limeBox
+    E:::limeBox
+    F:::limeBox
+    G:::limeBox
+    H:::limeBox
 ```
 
 ### PROJCRS
@@ -137,6 +146,13 @@ graph TD
     B --> D[PRIMEM<br/>Meridiano Principal]
     A --> E[CS<br/>Sistema de Coordenadas]
     A --> F[USAGE<br/>Área de Uso]
+    classDef limeBox fill:#cddc39,stroke:#D96868,stroke-width:8px;
+    A:::limeBox
+    B:::limeBox
+    C:::limeBox
+    D:::limeBox
+    E:::limeBox
+    F:::limeBox
 ```
 
 ### Semelhanças

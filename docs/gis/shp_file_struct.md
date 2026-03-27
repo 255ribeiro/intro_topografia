@@ -81,4 +81,4 @@ Arquivos auxiliares opcionais (mas comuns):
 
     Não existe "procedimento seguro”. Assumir WGS84 ou um CRS local pode causar erros de dezenas a centenas de metros.
     !!! warning
-        Sempre utilize, armazene e compartilhe o arquivo `.prj`!
+        Sempre utilize, armazene e compartilhe o arquivo `.prj`!!!

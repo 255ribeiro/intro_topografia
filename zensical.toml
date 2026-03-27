@@ -55,6 +55,7 @@ nav = [
 variant = "classic"
 language = "pt-BR"
 
+
 features = [
     "announce.dismiss",                  # allows users to dismiss the announcement bar
     # "content.action.view",             # adds a button to view the page source
@@ -90,15 +91,30 @@ features = [
 [project.theme.icon]
 logo = "fontawesome/solid/globe"
 
+# Palette toggle for automatic mode
 [[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
 scheme = "default"
+primary = "lime"
+accent = "yellow"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
+
+# Palette toggle for dark mode
 [[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
 scheme = "slate"
+primary = "lime"
+accent = "yellow"
 toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
+toggle.name = "Switch to system preference"
 
 [project.markdown_extensions]
 attr_list = {}
