@@ -1,4 +1,4 @@
-﻿# Definição de um sistema de coordenadas
+# Definição de um sistema de coordenadas
 
 Um dos elementos principais para a definição e descrição de um sistema de projeção é o datum.
 
@@ -8,7 +8,7 @@ Em Sistemas de Informação Geográfica (SIG), um datum é um conjunto de parâm
 
 ## Descrição do Sistema de Coordenadas
 
-Para definir um sistema de coordenadas de forma precisa e interoperável, é necessário um conjunto de informações que incluem o datum de referência, o elipsoide usado, o meridiano principal, o método de projeção (se aplicável), os parâmetros da conversão, o sistema de coordenadas (cartesianas ou elipsoidais), as unidades e a área de validade. A representação Well-Known Text (WKT) é um padrão internacional para estruturar e representar essas informações de maneira legível por máquinas e humanos. A definição WKT do SIRGAS 2000 / UTM Zone 24S (EPSG:31984) apresentada abaixo é um exemplo prático dessas informações e de como elas são organizadas:
+Para definir um sistema de coordenadas de forma precisa e interoperável, é necessário um conjunto de informações que incluem o datum de referência, o elipsoide usado, o meridiano principal, o método de projeção (se aplicável), os parâmetros da conversão, o sistema de coordenadas (cartesianas ou elipsoidais), as unidades e a área de validade. A representação Well-Known Text (WKT) é um padrão internacional para estruturar e representar essas informações de maneira legível por máquinas e humanos. A definição WKT do SIRGAS 2000 / UTM Zone 24S ([EPSG:31984](https://epsg.io/31984)) apresentada abaixo é um exemplo prático dessas informações e de como elas são organizadas:
 
 ```shell
 PROJCRS["SIRGAS 2000 / UTM zone 24S",
@@ -54,7 +54,7 @@ PROJCRS["SIRGAS 2000 / UTM zone 24S",
 
 ## Elementos de um Sistema de Coordenadas
 
-A estrutura do WKT apresenta um aspecto de aninhamento (nesting), onde elementos contêm subelementos, refletindo a hierarquia do sistema de coordenadas. O diagrama abaixo ilustra os elementos desta estrutura para o EPSG:31984:
+A estrutura do WKT apresenta um aspecto de aninhamento (nesting), onde elementos contêm subelementos, refletindo a hierarquia do sistema de coordenadas. O diagrama abaixo ilustra os elementos desta estrutura para o [EPSG:31984](https://epsg.io/31984):
 
 ```mermaid
 %%{init: {"securityLevel":"loose","flowchart":{"htmlLabels":true},"themeCSS": ".arrowheadPath{fill:#D96868!important;transform:scale(2.2);transform-origin:center;}"}}%%
@@ -142,9 +142,9 @@ O sistema de coordenadas cartesianas define os eixos (E para leste, N para norte
 
 O uso (usage) especifica a área de aplicação válida do sistema, incluindo bounding box geográfica. Para a zona 24S, cobre o nordeste brasileiro, garantindo que o sistema seja usado apenas onde suas propriedades de precisão se aplicam, evitando erros em regiões fora dessa faixa.
 
-## Comparação com EPSG:4674 (SIRGAS 2000 Geográfico)
+## Comparação com [EPSG:4674](https://epsg.io/4674) (SIRGAS 2000 Geográfico)
 
-O EPSG:4674 é o sistema geográfico correspondente ao SIRGAS 2000. A estrutura do WKT para sistemas geográficos é mais simples, sem projeção.
+O [EPSG:4674](https://epsg.io/4674) é o sistema geográfico correspondente ao SIRGAS 2000. A estrutura do WKT para sistemas geográficos é mais simples, sem projeção.
 
 ```shell
 GEODCRS["SIRGAS 2000",
@@ -204,7 +204,7 @@ graph TD
 Ambos os sistemas compartilham o mesmo datum (SIRGAS 2000), elipsoide (GRS 1980) e meridiano principal (Greenwich), garantindo consistência na representação da forma da Terra e origem das coordenadas. Eles são baseados em GPS moderno e cobrem regiões similares da América Latina, facilitando a interoperabilidade entre dados geográficos.
 
 ### Diferenças
-O EPSG:31984 é um sistema projetado (PROJCRS), convertendo coordenadas angulares em cartesianas planas para uso local preciso, enquanto o EPSG:4674 é geográfico (GEODCRS), mantendo coordenadas em latitude/longitude para escalas globais. O projetado inclui parâmetros de conversão (Transverse Mercator) e offsets falsos, adequados para medições métricas, mas com distorções crescentes à medida que se afasta da zona central. O geográfico é mais simples, sem projeção, mas menos preciso para distâncias locais devido à curvatura da Terra.
+O [EPSG:31984](https://epsg.io/31984) é um sistema projetado (PROJCRS), convertendo coordenadas angulares em cartesianas planas para uso local preciso, enquanto o [EPSG:4674](https://epsg.io/4674) é geográfico (GEODCRS), mantendo coordenadas em latitude/longitude para escalas globais. O projetado inclui parâmetros de conversão (Transverse Mercator) e offsets falsos, adequados para medições métricas, mas com distorções crescentes à medida que se afasta da zona central. O geográfico é mais simples, sem projeção, mas menos preciso para distâncias locais devido à curvatura da Terra.
 
 
 

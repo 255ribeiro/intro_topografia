@@ -25,7 +25,7 @@ nav = [
     {"Tipos de dados usados" = "gis/tipo_dados_gis.md"},
     {"Sistemas de Coordenadas" = "gis/coord_sys.md"},
     {"Sistemas de Coordenadas projetados" = "gis/sys_proj.md"},
-    {"Definição de um sistema de coordenadas" = "gis/datum_sirgas_utm.md"},
+    {"Definição de um sistema de coordenadas" = "gis/def_coord_sis.md"},
     {"Georreferenciamento" = "gis/georreferenciamento.md"},
     {"Arquivos Shapefile" = "gis/shp_file_struct.md"},
     
