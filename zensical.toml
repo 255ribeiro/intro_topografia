@@ -45,10 +45,10 @@ nav = [
 
 
 # Qgis
-#   {"Editais" = [
-#     {"Edital Avaliação 01" = "Editais/edital_av1.md"},
+  {"Editais" = [
+    {"Edital Avaliação 01" = "Editais/edital_av1.md"},
 #     {"Edital Avaliação 02" = "Editais/edital_av2_2025.md"},
-#   ]},
+  ]},
 ]
 
 [project.theme]

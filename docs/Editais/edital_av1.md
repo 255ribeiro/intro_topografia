@@ -36,10 +36,16 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
 - Organize suas pastas do projeto
 - Configure o Qgis para acessar os mapas do Google e o servidor da Cartografia da Prefeitura Municipal de Salvador
 - Delimite um terreno a sua escolha no Google Earth, coloque um ponto de referência dentro dos limites do terreno e baixe o arquivo KML com os dados gerados.
-- Crie um projeto no Qgis, carregue um mapa do Google para referência.
-- Carregue as camadas baixadas do Google Earth
-- Baixe os dados da prefeitura de Salvador relativos ao seu terreno e entorno
+<!-- - Crie um projeto no Qgis, carregue um mapa do Google para referência.
+- Carregue as camadas baixadas do Google Earth -->
+- Escolha um terreno em Salvador com os seguintes critérios
+  - área >= 1.000,00 m²
+  - desnível >= 10 m
+  - Crie uma camada de pontos e marque um ponto dentro da poligonal do terreno escolhido.
+  - Baixe os dados da prefeitura de Salvador relativos ao seu terreno e entorno
 - Recorte as camadas e salve em disco na pasta adequada
+- Em uma camada de polígonos, copie o polígono do terreno selecionado.
+- Coloque informações descritivas do terreno nesta camada.
 - A partir das curvas de nível, gere uma camada de curvas de nível em 3D
 - Exporte os arquivos para DXF
 - Abra o arquivo gerado em um CAD edite as cores dos layers e mova o terreno para próximo da origem utilizando o ponto de referência definido no Google earth.
