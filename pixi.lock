@@ -31,7 +31,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/2d/82/e5d2c1c67d19841e9edc74954c827444ae826978499bde3dfc1d007c8c11/deepmerge-2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/de/1f/77fa3081e4f66ca3576c896ae5d31c3002ac6607f9747d2e3aa49227e464/markdown-3.10.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/9b/6e/75da3f2c256a4a73e752f0bf662b1aa243fae23f47c8b5b98185e2c92c89/ogc2qgis-0.1.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/70/76/6de8e0e31608fc34e8ffe71d5ec455beae3ae210f2dadd0c209b23c94331/ogc2qgis-0.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6f/2c/5b079febdc65e1c3fb2729bf958d18b45be7113828528e8a0b5850dd819a/pymdown_extensions-10.21-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/23/20/bb6982b26a40bb43951265ba29d4c246ef0ff59c9fdcdf0ed04e0687de4d/pyyaml-6.0.3-cp314-cp314-win_amd64.whl
@@ -175,10 +175,10 @@ packages:
   - mkdocs-section-index ; extra == 'docs'
   - mkdocs-literate-nav ; extra == 'docs'
   requires_python: '>=3.10'
-- pypi: https://files.pythonhosted.org/packages/9b/6e/75da3f2c256a4a73e752f0bf662b1aa243fae23f47c8b5b98185e2c92c89/ogc2qgis-0.1.2-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/70/76/6de8e0e31608fc34e8ffe71d5ec455beae3ae210f2dadd0c209b23c94331/ogc2qgis-0.1.4-py3-none-any.whl
   name: ogc2qgis
-  version: 0.1.2
-  sha256: 3ec8717797777ae3e661f15df637d1f0b7efb82627bcb7a84ff81cd78d997e45
+  version: 0.1.4
+  sha256: 36d52221002b3da81774050b6ce9dd777fb6a73cd48d577d1e2b44dd42b735c4
   requires_python: '>=3.8,<4.0'
 - conda: https://conda.anaconda.org/conda-forge/win-64/openssl-3.6.1-hf411b9b_1.conda
   sha256: 53a5ad2e5553b8157a91bb8aa375f78c5958f77cb80e9d2ce59471ea8e5c0bd6
