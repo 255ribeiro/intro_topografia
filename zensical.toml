@@ -26,7 +26,7 @@ nav = [
     {"Conceitos" = "topografia/conceitos.md"},
     {"Descrição em topografia" = "topografia/topo_descri.md"},
     {"Limites da aplicação da Topografia" = "topografia/limites_aplicacao_topografia.md"},
-    {"Exercícios" = "topografia/exercícios.md"}
+    {"Exercícios" = "topografia/exercicios_topografia.md"}
   ]},
 
   {"GIS" = [
