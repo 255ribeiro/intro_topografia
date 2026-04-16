@@ -18,4 +18,4 @@ Google Roads:               ```https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z
 
 ### Configurações
 
-Baixar arquivo [XYZ config xml](qgis_config/qgis_XYZ_blocks_config.xml) para facilitar a configuração.
+Baixar arquivo [XYZ config xml](qgis_config/qgis_Google_XYZ_blocks_config.xml) para facilitar a configuração.
