@@ -40,7 +40,9 @@ nav = [
     {"Configuração de mapas do Google" = "qgis/qgis_xyz_google.md"},
     {"Configuração do servidor WFS de Salvador" = "qgis/Cartografica_PMS.md"},
     {"Configurações pelo INDE" = "qgis/qgis_config/inde/servidores_inde.md"},
-    {"Recortar camada" = "qgis/qgis_recorte_shape.md"},
+    {"Recortar camada vetorial" = "qgis/qgis_recorte_shape.md"},
+    {"Recortar camada Raster" = "qgis/recortar_raster.md"},
+    {"Curvas de nível por MDT"= "docs/qgis/contours_from_dem.md"},
     {"Video Playlists" = "qgis/qgis_playlists.md"},
   ]},
 
