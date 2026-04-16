@@ -12,3 +12,4 @@ python = "==3.14"
 
 [pypi-dependencies]
 zensical = ">=0.0.29, <0.0.30"
+ogc2qgis = ">=0.1.2, <0.2"

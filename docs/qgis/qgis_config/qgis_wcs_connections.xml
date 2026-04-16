@@ -1,0 +1,4 @@
+<!DOCTYPE connections>
+<qgsWCSConnections version="1.0">
+    <wcs ignoreAxisOrientation="0" invertAxisOrientation="0" password="" url="" username="" name="WCS Server" />
+</qgsWCSConnections>

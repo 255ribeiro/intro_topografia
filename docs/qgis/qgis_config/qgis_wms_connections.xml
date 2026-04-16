@@ -1,0 +1,4 @@
+<!DOCTYPE connections>
+<qgsWMSConnections version="1.0">
+    <wms ignoreGetFeatureInfoURI="0" ignoreGetMapURI="0" ignoreReportedLayerExtents="0" invertAxisOrientation="0" smoothPixmapTransform="0" dpiMode="7" password="" url="https://geoservicos.inde.gov.br/geoserver/BAPSalvador/ows" username="" name="GeoServer INDE" />
+</qgsWMSConnections>
