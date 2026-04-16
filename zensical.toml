@@ -52,7 +52,7 @@ nav = [
     {"Recortar camada vetorial" = "qgis/qgis_recorte_shape.md"},
     {"Recortar camada Raster" = "qgis/recortar_raster.md"},
     {"Curvas de nível por MDT"= "docs/qgis/contours_from_dem.md"},
-    {"Video Playlists" = "qgis/qgis_playlists.md"},
+
   ]},
 
 
@@ -61,6 +61,13 @@ nav = [
     {"Edital Avaliação 01" = "Editais/edital_av1.md"},
 #     {"Edital Avaliação 02" = "Editais/edital_av2_2025.md"},
   ]},
+
+  {"Cronograma" = "crono/crono.md"}, 
+
+{"Video Playlists" = "video_playlists.md"},
+
+
+
 ]
 
 [project.theme]
