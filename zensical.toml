@@ -28,7 +28,7 @@ nav = [
     {"Limites da aplicação da Topografia" = "topografia/limites_aplicacao_topografia.md"},
     {"Exercícios" = "topografia/exercícios.md"}
   ]},
-  
+
   {"GIS" = [
     {"GIS - Introdução" = "gis/introducao_gis.md"},
     {"Tipos de dados usados" = "gis/tipo_dados_gis.md"},
@@ -51,16 +51,8 @@ nav = [
     {"Configurações pelo INDE" = "qgis/qgis_config/inde/servidores_inde.md"},
     {"Recortar camada vetorial" = "qgis/qgis_recorte_shape.md"},
     {"Recortar camada Raster" = "qgis/recortar_raster.md"},
-    {"Curvas de nível por MDT"= "docs/qgis/contours_from_dem.md"}
+    {"Curvas de nível por MDT"= "docs/qgis/contours_from_dem.md"},
     {"Video Playlists" = "qgis/qgis_playlists.md"},
-  ]},
-
-  {"Topografia e Geodésia" =[
-
-    {"Conceitos" = "topografia/conceitos.md"},
-    {"Descrição em topografia" = "topografia/topo_descri.md"},
-    {"Limites da aplicação da Topografia" = "topografia/limites_aplicacao_topografia.md"},
-    {"Exercícios" = "topografia/exercícios.md"}
   ]},
 
 
