@@ -13,6 +13,12 @@ copyright = """
 Copyright &copy; 2026 The authors
 """
 
+extra_javascript = [
+    "javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
+
+
 # extra_javascript = [
 #     "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",  # 1st - the library
 #     "javascripts/download_zip_folder.js"                                 # 2nd - your code that uses it
@@ -147,11 +153,16 @@ pymdownx.blocks.caption = {}
 custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
 ]
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
 [project.markdown_extensions.pymdownx.tabbed]
 alternate_style = true
 
 [project.markdown_extensions.toc]
 toc_depth = 1
+
+
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
