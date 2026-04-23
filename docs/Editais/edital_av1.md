@@ -37,7 +37,7 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
 - Configure o Qgis para acessar os Seguntes serviços:
   - Mapas do Google como Blocos XYZ
   - Servidor WFS da Cartografia da Prefeitura Municipal de Salvador
-  - Servidores com imagens MDT para a região de Salvador
+  <!-- - Servidores com imagens MDT para a região de Salvador -->
 - Crie um projeto no Qgis, carregue um mapa do Google para referência.
 - Escolha um terreno em Salvador que atenda ao critério:
   - desnível >= 8 m
@@ -48,9 +48,9 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
 <!-- - Coloque informações descritivas do terreno nesta camada.
   - Sugestão: Use o plugin LFTools (https://plugins.qgis.org/plugins/lftools/) -->
 - A partir das curvas de nível, gere uma camada de curvas de nível em 3D
-- Para efeito didático gere curvas de nível com duas fontes diferentes de MTD
+<!-- - Para efeito didático gere curvas de nível com duas fontes diferentes de MTD -->
 - Exporte os arquivos para DXF
-- Abra o arquivo gerado em um CAD edite as cores dos layers e mova o terreno para próximo da origem utilizando o ponto de referência definido no Google earth.
+- Abra o arquivo gerado em um CAD edite as cores dos layers e mova o terreno para próximo da origem utilizando o ponto de referência definido no Qgis.
 - Em um programa de modelagem 3D, gere uma superfície a partir das curvas de nível 3D
 - Compacte todas as suas pastas e envie um arquivo único na tarefa aberta no ambiente virtual da disciplina
 
