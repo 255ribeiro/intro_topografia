@@ -6,7 +6,7 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
 
 - **Disciplina:** Introduçao a Topografia
 - **Avaliação:** Av1
-- **Data de entrega:** 30/10/2025
+- **Data de entrega:** 07/05/2026
 
 ## Conteúdo Avaliado
 
