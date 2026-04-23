@@ -45,8 +45,8 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
   - Baixe os dados da prefeitura de Salvador relativos ao seu terreno e entorno
 - Recorte as camadas e salve em disco na pasta adequada
 - Em uma camada de polígonos, copie o polígono do terreno selecionado.
-- Coloque informações descritivas do terreno nesta camada.
-  - Sugestão: Use o plugin LFTools (https://plugins.qgis.org/plugins/lftools/)
+<!-- - Coloque informações descritivas do terreno nesta camada.
+  - Sugestão: Use o plugin LFTools (https://plugins.qgis.org/plugins/lftools/) -->
 - A partir das curvas de nível, gere uma camada de curvas de nível em 3D
 - Para efeito didático gere curvas de nível com duas fontes diferentes de MTD
 - Exporte os arquivos para DXF
