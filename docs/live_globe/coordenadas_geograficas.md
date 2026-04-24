@@ -14,7 +14,7 @@ A posição de qualquer ponto na superfície terrestre é definida por duas gran
 
 O arco <span style="color:#1565C0; font-weight:600;">azul</span> mostra a **longitude** medida ao longo do Equador a partir de Greenwich; o arco <span style="color:#c62828; font-weight:600;">vermelho</span> mostra a **latitude** medida ao longo do meridiano do ponto a partir do Equador.
 
-<iframe src="../globe.html"
+<iframe src="./globe.html"
         width="100%"
         height="620px"
         style="border:none; border-radius:6px; display:block;">
