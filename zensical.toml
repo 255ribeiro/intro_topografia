@@ -29,6 +29,7 @@ nav = [
     {"Topografia e Geodésia" =[
 
     {"Conceitos" = "topografia/conceitos.md"},
+    {"Coordenadas geogáficas" = "live_globe/coordenadas_geograficas.md"},
     {"Descrição em topografia" = "topografia/topo_descri.md"},
     {"Limites da aplicação da Topografia" = "topografia/limites_aplicacao_topografia.md"},
     {"Azimute e Rumo" = "topografia/azimute_rumo.md"},
@@ -37,6 +38,7 @@ nav = [
 
   {"GIS" = [
     {"GIS - Introdução" = "gis/introducao_gis.md"},
+    {"Coordenadas Geográficas" = "live_globe/coordenadas_geograficas.md"},
     {"Tipos de dados usados" = "gis/tipo_dados_gis.md"},
     {"Sistemas de Coordenadas" = "gis/coord_sys.md"},
     {"Sistemas de Coordenadas projetados" = "gis/sys_proj.md"},

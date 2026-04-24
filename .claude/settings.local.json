@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.pixi/envs/default/Scripts/zensical build *)"
+    ]
+  }
+}

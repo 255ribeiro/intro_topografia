@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coordenadas Geográficas — Globo 3D</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #fff; color: #333; overflow: hidden; }
+    #globe-plot { width: 100%; }
+    .controls { padding: 4px 14px; }
+    .slider-row { display: flex; align-items: center; gap: 10px; margin: 4px 0; }
+    .slider-row label { font-weight: 600; min-width: 90px; font-size: 0.88em; }
+    .slider-wrap { flex: 1; display: flex; flex-direction: column; gap: 0; }
+    .scale-bar { position: relative; height: 20px; user-select: none; }
+    .scale-bar .tick { position: absolute; top: 0; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 1px; pointer-events: none; }
+    .scale-bar .tick-line { width: 1px; background: #999; }
+    .scale-bar .tick-label { font-size: 0.65em; color: #777; white-space: nowrap; }
+    .slider-row input[type=range] { width: 100%; cursor: pointer; margin: 0; }
+    .slider-row span { font-family: monospace; min-width: 52px; text-align: right; font-size: 0.88em; }
+    #info-panel {
+      margin: 5px 14px 6px; padding: 7px 14px;
+      background: #f4f4f4; border-radius: 4px;
+      border-left: 4px solid #8bc34a;
+      font-family: monospace; font-size: 0.88em;
+    }
+    .info-grid { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; }
+    #legend {
+      margin: 0 14px 6px; font-size: 0.78em; color: #555;
+      display: flex; gap: 14px; flex-wrap: wrap;
+    }
+    .leg-item { display: flex; align-items: center; gap: 5px; }
+    .leg-line { width: 22px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+    .leg-dot  { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    #btn-home {
+      display: block; margin: 2px 14px 4px auto; padding: 3px 12px;
+      font-size: 0.82em; font-family: system-ui, sans-serif;
+      background: none; border: 1px solid #aaa; border-radius: 4px;
+      cursor: pointer; color: #555; line-height: 1.6;
+    }
+    #btn-home:hover { background: #f0f0f0; border-color: #888; color: #222; }
+  </style>
+</head>
+<body>
+
+<div id="globe-plot"></div>
+
+<button id="btn-home">&#8962; Início</button>
+
+<div class="controls">
+  <div class="slider-row">
+    <label style="color:#c62828;">Latitude:</label>
+    <div class="slider-wrap">
+      <div id="lat-scale" class="scale-bar"></div>
+      <input type="range" id="lat-slide" min="-90" max="90" value="-15"
+             style="accent-color:#c62828;">
+    </div>
+    <span id="lat-num">-15°</span>
+  </div>
+  <div class="slider-row">
+    <label style="color:#1565C0;">Longitude:</label>
+    <div class="slider-wrap">
+      <div id="lon-scale" class="scale-bar"></div>
+      <input type="range" id="lon-slide" min="-180" max="180" value="-50"
+             style="accent-color:#1565C0;">
+    </div>
+    <span id="lon-num">-50°</span>
+  </div>
+</div>
+
+<div id="info-panel">
+  <div class="info-grid">
+    <span style="color:#c62828; opacity:.85;">Latitude</span>
+    <b id="v-lat" style="color:#c62828;">15° S</b>
+    <span style="color:#1565C0; opacity:.85;">Longitude</span>
+    <b id="v-lon" style="color:#1565C0;">50° O</b>
+  </div>
+</div>
+
+<div id="legend">
+  <span class="leg-item">
+    <span class="leg-line" style="background:#999;"></span> Equador / Meridiano de Greenwich
+  </span>
+  <span class="leg-item">
+    <span class="leg-line" style="background:#1565C0;"></span> Ângulo de longitude
+  </span>
+  <span class="leg-item">
+    <span class="leg-line" style="background:#c62828;"></span> Ângulo de latitude
+  </span>
+  <span class="leg-item">
+    <span class="leg-dot" style="background:#e53935;"></span> Ponto selecionado
+  </span>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+(function () {
+
+  var C_LAT = '#c62828';
+  var C_LON = '#1565C0';
+  var C_REF = '#aaa';
+  var ARC_R = 0.48;
+  var COAST = 'https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json';
+
+  function toRad(d) { return d * Math.PI / 180; }
+
+  function xyz(lat, lon, r) {
+    var f = toRad(lat), l = toRad(lon);
+    return { x: r * Math.cos(f) * Math.cos(l),
+             y: r * Math.cos(f) * Math.sin(l),
+             z: r * Math.sin(f) };
+  }
+
+  function formatLat(v) { return Math.abs(v) + '\xb0 ' + (v >= 0 ? 'N' : 'S'); }
+  function formatLon(v) { return Math.abs(v) + '\xb0 ' + (v >= 0 ? 'L' : 'O'); }
+
+  // ── Sphere surface grid ────────────────────────────────────────────────────
+
+  var nU = 72, nV = 36;
+  var sX = [], sY = [], sZ = [];
+  var sC = [];   // surfacecolor — updated after land-mask fetch
+
+  for (var vi = 0; vi <= nV; vi++) {
+    var rX = [], rY = [], rZ = [], rC = [];
+    var v = vi * Math.PI / nV;
+    for (var ui = 0; ui <= nU; ui++) {
+      var u = ui * 2 * Math.PI / nU;
+      rX.push(Math.sin(v) * Math.cos(u));
+      rY.push(Math.sin(v) * Math.sin(u));
+      rZ.push(Math.cos(v));
+      rC.push(0);            // start all ocean, update after fetch
+    }
+    sX.push(rX); sY.push(rY); sZ.push(rZ); sC.push(rC);
+  }
+
+  // ── Build land-mask color matrix from topojson via off-screen canvas ───────
+
+  function buildLandMask(land) {
+    var W = 720, H = 360;
+    var canvas = document.createElement('canvas');
+    canvas.width = W; canvas.height = H;
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#fff';
+
+    var feats = land.type === 'FeatureCollection' ? land.features : [land];
+    feats.forEach(function (feat) {
+      var geom = feat.geometry;
+      if (!geom) return;
+      var polys = geom.type === 'MultiPolygon' ? geom.coordinates
+                : geom.type === 'Polygon'      ? [geom.coordinates] : [];
+      polys.forEach(function (poly) {
+        ctx.beginPath();
+        poly.forEach(function (ring) {          // draw each ring (outer + holes)
+          ring.forEach(function (pt, i) {
+            var x = (pt[0] + 180) / 360 * W;
+            var y = (90 - pt[1])  / 180 * H;
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          });
+          ctx.closePath();
+        });
+        ctx.fill('evenodd');
+      });
+    });
+
+    var pixels = ctx.getImageData(0, 0, W, H).data;
+
+    // Map each sphere grid vertex to a land(1) / ocean(0) value
+    var mask = [];
+    for (var vi = 0; vi <= nV; vi++) {
+      var row = [];
+      var v = vi * Math.PI / nV;
+      for (var ui = 0; ui <= nU; ui++) {
+        var u   = ui * 2 * Math.PI / nU;
+        var lat =  90 - v * 180 / Math.PI;
+        var lonRaw = u * 180 / Math.PI;          // 0 → 360
+        var lon = lonRaw > 180 ? lonRaw - 360 : lonRaw;  // −180 → 180
+        var px  = Math.min(W - 1, Math.max(0, Math.round((lon + 180) / 360 * W)));
+        var py  = Math.min(H - 1, Math.max(0, Math.round((90 - lat)  / 180 * H)));
+        row.push(pixels[(py * W + px) * 4] > 128 ? 1 : 0);
+      }
+      mask.push(row);
+    }
+    return mask;
+  }
+
+  // ── Static reference geometry ──────────────────────────────────────────────
+
+  var R = 1.003;   // coastlines & graticule sit just above sphere
+
+  function sphRing(fn, n) {
+    var xs = [], ys = [], zs = [];
+    for (var i = 0; i <= n; i++) {
+      var p = fn(i / n);
+      xs.push(p.x); ys.push(p.y); zs.push(p.z);
+    }
+    return { x: xs, y: ys, z: zs };
+  }
+
+  // Equator and prime meridian (thicker, prominent)
+  var eq = sphRing(function (t) {
+    return { x: R * Math.cos(2*Math.PI*t), y: R * Math.sin(2*Math.PI*t), z: 0 };
+  }, 180);
+
+  var pm = sphRing(function (t) {
+    var a = 2 * Math.PI * t;
+    return { x: R * Math.cos(a), y: 0, z: R * Math.sin(a) };
+  }, 180);
+
+  // Secondary graticule: meridians every 30° + parallels every 30°
+  // (excluding 0° which are eq/pm above)
+  function buildGraticule() {
+    var xs = [], ys = [], zs = [];
+    var push = function (pts) {
+      xs = xs.concat(pts.x, [null]);
+      ys = ys.concat(pts.y, [null]);
+      zs = zs.concat(pts.z, [null]);
+    };
+
+    [-150,-120,-90,-60,-30,30,60,90,120,150,180].forEach(function (lon) {
+      push(sphRing(function (t) {
+        var f = toRad(-90 + 180 * t), l = toRad(lon);
+        return { x: R*Math.cos(f)*Math.cos(l), y: R*Math.cos(f)*Math.sin(l), z: R*Math.sin(f) };
+      }, 90));
+    });
+
+    [-60,-30,30,60].forEach(function (lat) {
+      push(sphRing(function (t) {
+        var f = toRad(lat), l = toRad(-180 + 360 * t);
+        return { x: R*Math.cos(f)*Math.cos(l), y: R*Math.cos(f)*Math.sin(l), z: R*Math.sin(f) };
+      }, 180));
+    });
+
+    return { x: xs, y: ys, z: zs };
+  }
+
+  var grat = buildGraticule();
+  var nsAxis = { x: [0,0], y: [0,0], z: [-1.3, 1.3] };
+  var pmStub = { x: [0, R], y: [0, 0], z: [0, 0] };
+
+  // ── Arc generators ─────────────────────────────────────────────────────────
+
+  function sphPts(fn, n) {
+    var xs = [], ys = [], zs = [];
+    for (var i = 0; i <= n; i++) { var p = fn(i/n); xs.push(p.x); ys.push(p.y); zs.push(p.z); }
+    return { x: xs, y: ys, z: zs };
+  }
+
+  function lonArc(lon) {
+    var n = Math.max(6, Math.abs(Math.round(lon)));
+    return sphPts(function (t) {
+      var a = toRad(lon * t);
+      return { x: ARC_R*Math.cos(a), y: ARC_R*Math.sin(a), z: 0 };
+    }, n);
+  }
+
+  function latArc(lat, lon) {
+    var n = Math.max(6, Math.abs(Math.round(lat)));
+    var l = toRad(lon);
+    return sphPts(function (t) {
+      var f = toRad(lat * t);
+      return { x: ARC_R*Math.cos(f)*Math.cos(l),
+               y: ARC_R*Math.cos(f)*Math.sin(l),
+               z: ARC_R*Math.sin(f) };
+    }, n);
+  }
+
+  // ── Dynamic trace data ─────────────────────────────────────────────────────
+
+  function dynData(lat, lon) {
+    var eq0  = xyz(0,   lon, 0.54);
+    var pt   = xyz(lat, lon, 1.0);
+    var la   = lonArc(lon);
+    var la2  = latArc(lat, lon);
+    return [
+      // [7] Blue line: center → equatorial projection
+      { x:[0,eq0.x], y:[0,eq0.y], z:[0,eq0.z],
+        mode:'lines+markers', line:{color:C_LON,width:5},
+        marker:{size:[0,6],color:C_LON} },
+      // [8] Blue arc: longitude angle in equatorial plane
+      { x:la.x, y:la.y, z:la.z, mode:'lines', line:{color:C_LON,width:5} },
+      // [9] Red line: center → point on sphere
+      { x:[0,pt.x], y:[0,pt.y], z:[0,pt.z], mode:'lines', line:{color:C_LAT,width:5} },
+      // [10] Red arc: latitude angle in meridional plane
+      { x:la2.x, y:la2.y, z:la2.z, mode:'lines', line:{color:C_LAT,width:5} },
+      // [11] Red marker: point on sphere
+      { x:[pt.x*1.01], y:[pt.y*1.01], z:[pt.z*1.01],
+        mode:'markers', marker:{size:7,color:'#e53935'} }
+    ];
+  }
+
+  function s3d(d) {
+    return Object.assign({ type:'scatter3d', hoverinfo:'none', showlegend:false }, d);
+  }
+
+  // ── Build all traces ───────────────────────────────────────────────────────
+
+  function buildTraces(lat, lon) {
+    var dyn = dynData(lat, lon);
+    return [
+      // [0] Transparent sphere — hover circles disabled via contours.highlight
+      { type:'surface', x:sX, y:sY, z:sZ, surfacecolor:sC,
+        colorscale:[[0,'rgb(95,155,210)'],[1,'rgb(100,185,100)']],
+        showscale:false, opacity:0.40,
+        lighting:{ ambient:1, diffuse:0, specular:0 },
+        contours:{
+          x:{highlight:false}, y:{highlight:false}, z:{highlight:false}
+        },
+        hoverinfo:'none', showlegend:false },
+      // [1] Coastlines placeholder (filled after fetch)
+      s3d({ x:[], y:[], z:[], mode:'lines', line:{color:'#333',width:1} }),
+      // [2] Equator
+      s3d({ x:eq.x, y:eq.y, z:eq.z, mode:'lines', line:{color:C_REF,width:2} }),
+      // [3] Prime meridian
+      s3d({ x:pm.x, y:pm.y, z:pm.z, mode:'lines', line:{color:C_REF,width:2} }),
+      // [4] Secondary graticule (30° spacing)
+      s3d({ x:grat.x, y:grat.y, z:grat.z, mode:'lines',
+            line:{color:'rgba(150,150,150,0.5)',width:0.8} }),
+      // [5] N–S polar axis
+      s3d({ x:nsAxis.x, y:nsAxis.y, z:nsAxis.z, mode:'lines',
+            line:{color:'#ddd',width:1,dash:'dot'} }),
+      // [6] Gray stub to prime-meridian reference on equator
+      s3d({ x:pmStub.x, y:pmStub.y, z:pmStub.z, mode:'lines+markers',
+            line:{color:C_REF,width:3}, marker:{size:[0,5],color:C_REF} }),
+      // [7–11] Dynamic traces
+      s3d(dyn[0]), s3d(dyn[1]), s3d(dyn[2]), s3d(dyn[3]), s3d(dyn[4])
+    ];
+  }
+
+  var layout = {
+    scene: {
+      xaxis: { visible:false, showgrid:false, zeroline:false,
+               showline:false, showspikes:false, range:[-1.5,1.5] },
+      yaxis: { visible:false, showgrid:false, zeroline:false,
+               showline:false, showspikes:false, range:[-1.5,1.5] },
+      zaxis: { visible:false, showgrid:false, zeroline:false,
+               showline:false, showspikes:false, range:[-1.5,1.5] },
+      aspectmode:'manual',
+      aspectratio:{ x:1, y:1, z:1 },
+      camera:{ eye:{ x:1.4, y:-1.2, z:0.7 }, center:{ x:0, y:0, z:0 } },
+      bgcolor:'rgba(0,0,0,0)'
+    },
+    margin:{ t:0, b:0, l:0, r:0 },
+    height:440,
+    paper_bgcolor:'#fff'
+  };
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+
+  var lat0 = -15, lon0 = -50;
+  Plotly.newPlot('globe-plot', buildTraces(lat0, lon0), layout,
+                 { displayModeBar:false, responsive:true });
+
+  // Load coastlines + land mask asynchronously
+  fetch(COAST)
+    .then(function (r) { return r.json(); })
+    .then(function (world) {
+      var land = topojson.feature(world, world.objects.land);
+
+      // — coastline lines —
+      var ax = [], ay = [], az = [];
+      var feats = land.type === 'FeatureCollection' ? land.features : [land];
+      feats.forEach(function (feat) {
+        var geom = feat.geometry;
+        if (!geom) return;
+        var polys = geom.type === 'MultiPolygon' ? geom.coordinates
+                  : geom.type === 'Polygon'      ? [geom.coordinates] : [];
+        polys.forEach(function (poly) {
+          poly.forEach(function (ring) {
+            ring.forEach(function (pt) {
+              var l = toRad(pt[0]), f = toRad(pt[1]);
+              ax.push(R*Math.cos(f)*Math.cos(l));
+              ay.push(R*Math.cos(f)*Math.sin(l));
+              az.push(R*Math.sin(f));
+            });
+            ax.push(null); ay.push(null); az.push(null);
+          });
+        });
+      });
+      Plotly.restyle('globe-plot', { x:[ax], y:[ay], z:[az] }, 1);
+
+      // — land-mask color on sphere surface —
+      var mask = buildLandMask(land);
+      Plotly.restyle('globe-plot', { surfacecolor:[mask] }, 0);
+    })
+    .catch(function () { /* offline — no coastlines, uniform sphere */ });
+
+  // ── Slider update ──────────────────────────────────────────────────────────
+
+  var latSlide = document.getElementById('lat-slide');
+  var lonSlide = document.getElementById('lon-slide');
+  var latNum   = document.getElementById('lat-num');
+  var lonNum   = document.getElementById('lon-num');
+  var vLat     = document.getElementById('v-lat');
+  var vLon     = document.getElementById('v-lon');
+
+  function update() {
+    var lat = +latSlide.value;
+    var lon = +lonSlide.value;
+    var dyn = dynData(lat, lon);
+    Plotly.restyle('globe-plot',
+      { x:dyn.map(function(t){return t.x;}),
+        y:dyn.map(function(t){return t.y;}),
+        z:dyn.map(function(t){return t.z;}) },
+      [7, 8, 9, 10, 11]
+    );
+    latNum.textContent = lat + '\xb0';
+    lonNum.textContent = lon + '\xb0';
+    vLat.textContent   = formatLat(lat);
+    vLon.textContent   = formatLon(lon);
+  }
+
+  latSlide.addEventListener('input', update);
+  lonSlide.addEventListener('input', update);
+
+  document.getElementById('btn-home').addEventListener('click', function () {
+    latSlide.value = -15;
+    lonSlide.value = -50;
+    update();
+    Plotly.relayout('globe-plot', {
+      'scene.camera': { eye: { x:1.4, y:-1.2, z:0.7 }, center: { x:0, y:0, z:0 } }
+    });
+  });
+
+  // ── Degree scale bars ─────────────────────────────────────────────────────
+  function makeScale(barId, min, max, step, labels) {
+    var bar = document.getElementById(barId);
+    if (!bar) return;
+    var range = max - min;
+    // account for browser thumb inset (~8px each side)
+    var inset = 8;
+    for (var v = min; v <= max; v += step) {
+      var pct = (v - min) / range;          // 0..1
+      var tick = document.createElement('div');
+      tick.className = 'tick';
+      tick.style.left = 'calc(' + inset + 'px + (100% - ' + (2*inset) + 'px) * ' + pct + ')';
+      var line = document.createElement('div');
+      line.className = 'tick-line';
+      line.style.height = labels.indexOf(v) >= 0 ? '8px' : '5px';
+      tick.appendChild(line);
+      if (labels.indexOf(v) >= 0) {
+        var lbl = document.createElement('div');
+        lbl.className = 'tick-label';
+        lbl.textContent = v + '\xb0';
+        tick.appendChild(lbl);
+      }
+      bar.appendChild(tick);
+    }
+  }
+
+  makeScale('lat-scale', -90, 90, 10, [-90, 0, 90]);
+  makeScale('lon-scale', -180, 180, 10, [-180, -90, 0, 90, 180]);
+
+})();
+</script>
+</body>
+</html>

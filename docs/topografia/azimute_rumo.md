@@ -183,8 +183,8 @@ O arco <span style="color:#1565C0; font-weight:600;">azul externo</span> mede o 
         range: [-1.65, 1.65], showgrid: false, zeroline: false,
         showticklabels: false, fixedrange: true
       },
-      paper_bgcolor: 'rgba(255,255,255,0.92)',
-      plot_bgcolor:  'rgba(255,255,255,0.92)',
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor:  'rgba(0,0,0,0)',
       annotations: [
         { x: 0,     y:  1.52, text: '<b>N</b>', font: { size: 22, color: '#c62828' }, showarrow: false },
         { x: 1.52,  y:  0,    text: '<b>L</b>', font: { size: 22, color: '#444'    }, showarrow: false },
