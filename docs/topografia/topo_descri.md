@@ -19,7 +19,6 @@ A **cota** é a altura de um ponto em relação a um **plano de referência adot
 
 ### Altitude
 
-
 A **altitude** é a altura de um ponto em relação ao **nível médio do mar** (ou a um datum vertical oficial).[^2]
 
 - Uso comum: cartografia, geodesia, mapas regionais e dados GNSS.
