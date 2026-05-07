@@ -44,11 +44,40 @@ Em projetos reais, os dois campos caminham juntos. Por exemplo:
 
 Sem referência geodésica correta, dados podem ficar deslocados. Sem topografia bem executada, faltará precisão no detalhe da obra.[^3]
 
-## Resumo
+## Planimetria e Altimetria
 
-- **Topografia**: medição e representação detalhada de áreas locais.
-- **Geodésia**: base científica do posicionamento e dos sistemas de referência.
-- **Uso conjunto**: essencial para mapeamento confiável, georreferenciamento e engenharia.
+Dentro da topografia, dois conceitos aparecem com frequência: **planimetria** e **altimetria**.
+
+### Planimetria
+
+A **planimetria** trata da posição dos pontos no plano horizontal. Ela representa a localização relativa dos elementos do terreno por meio de distâncias, ângulos e coordenadas planas, sem considerar diretamente as diferenças de altura.
+
+Na prática, a planimetria é usada para definir:
+
+- limites de lotes e terrenos;
+- eixos de vias e alinhamentos;
+- posição de construções, cercas, postes e outros elementos no plano;
+- coordenadas X e Y, ou E e N.
+
+### Altimetria
+
+A **altimetria** trata da componente vertical do terreno, ou seja, das alturas e diferenças de nível entre os pontos. Ela permite representar o relevo e entender como a superfície sobe, desce ou se mantém aproximadamente constante.
+
+Na prática, a altimetria é usada para definir:
+
+- cotas e altitudes;
+- perfis longitudinais e transversais;
+- curvas de nível;
+- declividades e desníveis.
+
+### Uso conjunto
+
+Em um levantamento topográfico completo, planimetria e altimetria trabalham juntas:
+
+- a **planimetria** responde onde o ponto está no plano;
+- a **altimetria** responde qual é a sua posição vertical.
+
+Por isso, um ponto do terreno pode ser descrito de forma mais completa por coordenadas horizontais e um valor de altura, como **P = (X, Y, Z)**.
 
 ## Leitura complementar
 
@@ -57,13 +86,13 @@ Para a discussão sobre distância-limite de aplicação da topografia, critéri
 - [Limites de aplicação da Topografia e da Geodésia](limites_aplicacao_topografia.md)
 
 [^1]:
-	Referência normativa para levantamento topográfico no Brasil: ABNT NBR 13133.
-	[https://www.abntcatalogo.com.br/norma.aspx?ID=4512](https://www.abntcatalogo.com.br/norma.aspx?ID=4512)
+    Referência normativa para levantamento topográfico no Brasil: ABNT NBR 13133.
+    [https://www.abntcatalogo.com.br/norma.aspx?ID=4512](https://www.abntcatalogo.com.br/norma.aspx?ID=4512)
 
 [^2]:
-	Referência institucional sobre Geodésia no Brasil: IBGE - Geodésia.
-	[https://www.ibge.gov.br/geociencias/geodesia.html](https://www.ibge.gov.br/geociencias/geodesia.html)
+    Referência institucional sobre Geodésia no Brasil: IBGE - Geodésia.
+    [https://www.ibge.gov.br/geociencias/geodesia.html](https://www.ibge.gov.br/geociencias/geodesia.html)
 
 [^3]:
-	Referência aplicada ao georreferenciamento e padronização técnica: INCRA.
-	[https://www.gov.br/incra/pt-br/assuntos/governanca-fundiaria/georreferenciamento](https://www.gov.br/incra/pt-br/assuntos/governanca-fundiaria/georreferenciamento)
+    Referência aplicada ao georreferenciamento e padronização técnica: INCRA.
+    [https://www.gov.br/incra/pt-br/assuntos/governanca-fundiaria/georreferenciamento](https://www.gov.br/incra/pt-br/assuntos/governanca-fundiaria/georreferenciamento)
