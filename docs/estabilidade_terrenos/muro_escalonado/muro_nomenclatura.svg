@@ -1,0 +1,70 @@
+<svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+  <title>Nomenclatura e dimensões do muro escalonado</title>
+  <defs>
+    <marker id="dim-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 5 L10 5 M0 2 L0 8 M10 2 L10 8" fill="none" stroke="context-stroke" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  
+  <!-- Solo de fundação -->
+  <rect x="50" y="380" width="500" height="70" fill="#97C459" fill-opacity="0.2" stroke="#639922" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="11" x="300" y="420" text-anchor="middle" fill="#3B6D11">Solo de fundação</text>
+  
+  <!-- Solo retido em camadas encostando nos degraus -->
+  <rect x="340" y="330" width="210" height="50" fill="#EF9F27" fill-opacity="0.3" stroke="#BA7517" stroke-width="0.5"/>
+  <rect x="325" y="280" width="225" height="50" fill="#EF9F27" fill-opacity="0.3" stroke="#BA7517" stroke-width="0.5"/>
+  <rect x="310" y="230" width="240" height="50" fill="#EF9F27" fill-opacity="0.3" stroke="#BA7517" stroke-width="0.5"/>
+  <rect x="295" y="180" width="255" height="50" fill="#EF9F27" fill-opacity="0.3" stroke="#BA7517" stroke-width="0.5"/>
+  <rect x="280" y="130" width="270" height="50" fill="#EF9F27" fill-opacity="0.3" stroke="#BA7517" stroke-width="0.5"/>
+  <rect x="265" y="80" width="285" height="50" fill="#EF9F27" fill-opacity="0.3" stroke="#BA7517" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="11" x="420" y="210" text-anchor="middle" fill="#854F0B">Solo retido</text>
+  
+  <!-- Estrutura do muro com degraus -->
+  <!-- Base com calcanhar -->
+  <rect x="170" y="330" width="170" height="50" rx="3" fill="#B4B2A9" stroke="#5F5E5A" stroke-width="1"/>
+  <rect x="200" y="280" width="125" height="50" rx="3" fill="#B4B2A9" stroke="#5F5E5A" stroke-width="1"/>
+  <rect x="200" y="230" width="110" height="50" rx="3" fill="#B4B2A9" stroke="#5F5E5A" stroke-width="1"/>
+  <rect x="200" y="180" width="95" height="50" rx="3" fill="#B4B2A9" stroke="#5F5E5A" stroke-width="1"/>
+  <rect x="200" y="130" width="80" height="50" rx="3" fill="#B4B2A9" stroke="#5F5E5A" stroke-width="1"/>
+  <rect x="200" y="80" width="65" height="50" rx="3" fill="#B4B2A9" stroke="#5F5E5A" stroke-width="1"/>
+  
+  <!-- Linhas de cota - Altura H -->
+  <line x1="150" y1="80" x2="150" y2="380" stroke="#333" stroke-width="1.5" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+  <text font-family="sans-serif" font-size="14" font-weight="500" x="135" y="235" text-anchor="end" fill="#333">H</text>
+  
+  <!-- Linhas de cota - Base B -->
+  <line x1="170" y1="405" x2="340" y2="405" stroke="#333" stroke-width="1.5" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+  <text font-family="sans-serif" font-size="14" font-weight="500" x="255" y="395" text-anchor="middle" fill="#333">B</text>
+  
+  <!-- Componentes da base -->
+  <line x1="170" y1="425" x2="200" y2="425" stroke="#1D9E75" stroke-width="1.5" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+  <text font-family="sans-serif" font-size="11" x="185" y="440" text-anchor="middle" fill="#1D9E75">b₁</text>
+  
+  <line x1="200" y1="425" x2="260" y2="425" stroke="#378ADD" stroke-width="1.5" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+  <text font-family="sans-serif" font-size="11" x="230" y="440" text-anchor="middle" fill="#378ADD">b₂</text>
+  
+  <line x1="260" y1="425" x2="340" y2="425" stroke="#D85A30" stroke-width="1.5" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+  <text font-family="sans-serif" font-size="11" x="300" y="440" text-anchor="middle" fill="#D85A30">b₃</text>
+  
+  <!-- Espessura topo -->
+  <line x1="200" y1="60" x2="265" y2="60" stroke="#333" stroke-width="1.5" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+  <text font-family="sans-serif" font-size="14" font-weight="500" x="232" y="52" text-anchor="middle" fill="#333">e</text>
+  
+  <!-- Labels dos componentes -->
+  <text font-family="sans-serif" font-size="10" x="145" y="455" text-anchor="end" fill="#1D9E75">Calcanhar</text>
+  <text font-family="sans-serif" font-size="10" x="250" y="455" text-anchor="middle" fill="#378ADD">Corpo</text>
+  <text font-family="sans-serif" font-size="10" x="360" y="455" text-anchor="start" fill="#D85A30">Pé</text>
+  
+  <!-- Linha da face externa -->
+  <line x1="200" y1="80" x2="200" y2="380" stroke="#378ADD" stroke-width="2" stroke-dasharray="5 3" opacity="0.5"/>
+  <text font-family="sans-serif" font-size="10" x="165" y="165" text-anchor="end" fill="#378ADD">Face</text>
+  <text font-family="sans-serif" font-size="10" x="165" y="178" text-anchor="end" fill="#378ADD">externa</text>
+  
+  <!-- Nota sobre degraus -->
+  <text font-family="sans-serif" font-size="10" x="360" y="270" text-anchor="start" fill="#854F0B">Face interna</text>
+  <text font-family="sans-serif" font-size="10" x="360" y="283" text-anchor="start" fill="#854F0B">escalonada</text>
+  
+  <!-- Nível do terreno -->
+  <line x1="50" y1="380" x2="550" y2="380" stroke="#888780" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.6"/>
+  <text font-family="sans-serif" font-size="10" x="70" y="372" text-anchor="start" fill="#888780">Nível da fundação</text>
+</svg>

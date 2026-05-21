@@ -14,67 +14,120 @@ Copyright &copy; 2026 The authors
 """
 
 extra_javascript = [
-    "javascripts/mathjax.js",
-    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
-#     "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",  # 1st - the library
-#     "javascripts/download_zip_folder.js"                                 # 2nd - your code that uses it
+  "javascripts/mathjax.js",
+  "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
+  #     "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",  # 1st - the library
+  #     "javascripts/download_zip_folder.js"                                 # 2nd - your code that uses it
 ]
 
 
-
-
 nav = [
-  {"Home" = "index.md" },
+  { "Home" = "index.md" },
 
-    {"Topografia e Geodésia" =[
+  { "Topografia e Geodésia" = [
 
-    {"Conceitos" = "topografia/conceitos.md"},
-    {"Limites da aplicação da Topografia" = "topografia/limites_aplicacao_topografia.md"},
-    
-    {"Descrição em topografia" = "topografia/topo_descri.md"},
-    
-    {"Azimute e Rumo" = "topografia/azimute_rumo.md"},
-    {"Exercícios" = "topografia/exercicios_topografia.md"}
-  ]},
+    { "Conceitos" = "topografia/conceitos.md" },
+    { "Limites da aplicação da Topografia" = "topografia/limites_aplicacao_topografia.md" },
 
-  {"GIS" = [
-    {"GIS - Introdução" = "gis/introducao_gis.md"},
-    {"Coordenadas Geográficas" = "live_globe/coordenadas_geograficas.md"},
-    {"Tipos de dados usados" = "gis/tipo_dados_gis.md"},
-    {"Sistemas de Coordenadas" = "gis/coord_sys.md"},
-    {"Sistemas de Coordenadas projetados" = "gis/sys_proj.md"},
-    {"Definição de um sistema de coordenadas" = "gis/def_coord_sis.md"},
-    {"Georreferenciamento" = "gis/georreferenciamento.md"},
-    {"Arquivos Shapefile" = "gis/shp_file_struct.md"},
-    
-  ]},
-  
-  {"Sites com informações geográficas de Salvador"="ssa_geo/ssa_geo.md"},
+    { "Descrição em topografia" = "topografia/topo_descri.md" },
+
+    { "Azimute e Rumo" = "topografia/azimute_rumo.md" },
+    { "Exercícios" = "topografia/exercicios_topografia.md" },
+  ] },
+
+  { "Estabilidade de terrenos" = [
+
+    {"Definição" = "estabilidade_terrenos/"},
+    {"Alternativas técnicas para estabilização de terrenos" = [
+
+      {"Tipos de Plataformas e Taludes" = [
+        {"Visão Geral" = "estabilidade_terrenos/taludes/"},
+        {"Taludes de Corte" = "estabilidade_terrenos/taludes/corte/"},
+        {"Taludes de Aterro" = "estabilidade_terrenos/taludes/aterro/"},
+      ]},
+
+      {"Tratamento Superficial" = [
+        {"Visão Geral" = "estabilidade_terrenos/tratamento_superficial/"},
+        {"Vegetação Rasteira" = "estabilidade_terrenos/tratamento_superficial/vegetacao/"},
+        {"Telas e Geossintéticos" = "estabilidade_terrenos/tratamento_superficial/telas/"},
+        {"Argamassa e Concreto Jateado" = "estabilidade_terrenos/tratamento_superficial/concreto_jateado/"},
+      ]},
+
+      {"Solo Reforçado" = [
+        {"Visão Geral" = "estabilidade_terrenos/solo_reforcado/"},
+        {"Terra Armada" = "estabilidade_terrenos/solo_reforcado/terra_armada/"},
+        {"Geossintéticos" = "estabilidade_terrenos/solo_reforcado/geossinteticos/"},
+        {"Reforços Alternativos" = "estabilidade_terrenos/solo_reforcado/alternativos/"},
+      ]},
+
+      {"Solo Grampeado" = "estabilidade_terrenos/solo_grampeado/"},
+
+      {"Muro de Arrimo" = [
+        {"Visão Geral" = "estabilidade_terrenos/muro_arrimo/"},
+        {"Muros por Gravidade" = "estabilidade_terrenos/muro_arrimo/gravidade/"},
+        {"Pedra Sem Argamassa" = "estabilidade_terrenos/muro_arrimo/gravidade/pedra_sem_argamassa/"},
+        {"Pedra Argamassada" = "estabilidade_terrenos/muro_arrimo/gravidade/pedra_argamassada/"},
+        {"Gabião" = "estabilidade_terrenos/muro_arrimo/gravidade/gabiao/"},
+        {"Solo-Cimento Ensacado" = "estabilidade_terrenos/muro_arrimo/gravidade/solo_cimento_ensacado/"},
+        {"Muro Escalonado" = "estabilidade_terrenos/muro_escalonado/"},
+        {"Muros de Flexão" = "estabilidade_terrenos/muro_arrimo/gravidade/muros_flexao/"},
+      ]},
+
+      {"Cortina Atirantada" = "estabilidade_terrenos/cortina_atirantada/"},
+
+      {"Muros Fincados" = [
+        {"Visão Geral" = "estabilidade_terrenos/muros_fincados/"},
+        {"Estacas Pranchas" = "estabilidade_terrenos/muros_fincados/estacas_pranchas/"},
+      ]},
+
+      {"Muros Escavados" = [
+        {"Visão Geral" = "estabilidade_terrenos/muros_escavados/"},
+        {"Paredes Diafragma" = "estabilidade_terrenos/muros_escavados/paredes_diafragma/"},
+        {"Estacas Moldadas Justapostas" = "estabilidade_terrenos/muros_escavados/estacas_moldadas/"},
+      ]},
+
+    ]},
+
+
+  ] },
+
+  { "GIS" = [
+    { "GIS - Introdução" = "gis/introducao_gis.md" },
+    { "Coordenadas Geográficas" = "live_globe/coordenadas_geograficas.md" },
+    { "Tipos de dados usados" = "gis/tipo_dados_gis.md" },
+    { "Sistemas de Coordenadas" = "gis/coord_sys.md" },
+    { "Sistemas de Coordenadas projetados" = "gis/sys_proj.md" },
+    { "Definição de um sistema de coordenadas" = "gis/def_coord_sis.md" },
+    { "Georreferenciamento" = "gis/georreferenciamento.md" },
+    { "Arquivos Shapefile" = "gis/shp_file_struct.md" },
+
+  ] },
+
+  { "Sites com informações geográficas de Salvador" = "ssa_geo/ssa_geo.md" },
 
   # Qgis
-  {"Qgis" = [
-    {"Introdução" = "qgis/qgis.md"},
-    {"Interface" = "qgis/qgis_interface.md"},
-    {"Configuração de mapas do Google" = "qgis/qgis_xyz_google.md"},
-    {"Configuração do servidor WFS de Salvador" = "qgis/Cartografica_PMS.md"},
-    {"Configurações pelo INDE" = "qgis/qgis_config/inde/servidores_inde.md"},
-    {"Recortar camada vetorial" = "qgis/qgis_recorte_shape.md"},
-    {"Recortar camada Raster" = "qgis/recortar_raster.md"},
-    {"Curvas de nível por MDT"= "docs/qgis/contours_from_dem.md"},
+  { "Qgis" = [
+    { "Introdução" = "qgis/qgis.md" },
+    { "Interface" = "qgis/qgis_interface.md" },
+    { "Configuração de mapas do Google" = "qgis/qgis_xyz_google.md" },
+    { "Configuração do servidor WFS de Salvador" = "qgis/Cartografica_PMS.md" },
+    { "Configurações pelo INDE" = "qgis/qgis_config/inde/servidores_inde.md" },
+    { "Recortar camada vetorial" = "qgis/qgis_recorte_shape.md" },
+    { "Recortar camada Raster" = "qgis/recortar_raster.md" },
+    { "Curvas de nível por MDT" = "docs/qgis/contours_from_dem.md" },
 
-  ]},
+  ] },
 
 
-# Qgis
-  {"Editais" = [
-    {"Edital Avaliação 01" = "Editais/edital_av1.md"},
-#     {"Edital Avaliação 02" = "Editais/edital_av2_2025.md"},
-  ]},
+  # Qgis
+  { "Editais" = [
+    { "Edital Avaliação 01" = "Editais/edital_av1.md" },
+    #     {"Edital Avaliação 02" = "Editais/edital_av2_2025.md"},
+  ] },
 
-  {"Cronograma" = "crono/crono.md"}, 
+  { "Cronograma" = "crono/crono.md" },
 
-{"Video Playlists" = "video_playlists.md"},
-
+  { "Video Playlists" = "video_playlists.md" },
 
 
 ]
@@ -85,35 +138,35 @@ language = "pt-BR"
 
 
 features = [
-    "announce.dismiss",                  # allows users to dismiss the announcement bar
-    # "content.action.view",             # adds a button to view the page source
-    # "content.action.edit",             # adds a button to edit the page in the repo
-    "content.code.annotate",             # enables annotations inside code blocks
-    "content.code.copy",                 # adds a copy button to code blocks
-    "content.code.select",               # adds a line range selection button to code blocks
-    "content.footnote.tooltips",         # renders footnotes as inline tooltips
-    "content.tabs.link",                 # syncs all content tabs with the same label
-    "content.tooltips",                  # enables tooltips on links
-    # "header.autohide",                 # hides header when scrolling down
-    # "navigation.expand",               # expands all nav sections by default
-    # "navigation.footer",               # adds prev/next page links in footer
-    # "navigation.indexes",              # attaches index.md to section headers
-    "navigation.instant",                # enables instant navigation via XHR
-    "navigation.instant.prefetch",       # prefetches pages on link hover
-    "navigation.instant.progress",       # shows progress bar on slow connections
-    "navigation.path",                   # shows breadcrumb above page title
-    # "navigation.prune",                # only renders visible nav items (reduces size)
-    # "navigation.sections",             # renders top-level sections as flat groups
-    # "navigation.tabs",                 # renders top-level sections as header tabs
-    # "navigation.tabs.sticky",          # keeps tabs visible while scrolling
-    "navigation.top",                    # shows back-to-top button
-    "navigation.tracking",               # updates URL with active anchor
-    "search.highlight",                  # highlights search terms after following result
-    "search.share",                      # adds a share button to search results
-    "search.suggest",                    # shows search suggestions while typing
-    "toc.follow",                        # auto-scrolls TOC to active anchor
-    # "toc.integrate",
-    "content.footnote.tooltips"                  # moves TOC into the left navigation sidebar
+  "announce.dismiss", # allows users to dismiss the announcement bar
+  # "content.action.view",             # adds a button to view the page source
+  # "content.action.edit",             # adds a button to edit the page in the repo
+  "content.code.annotate",     # enables annotations inside code blocks
+  "content.code.copy",         # adds a copy button to code blocks
+  "content.code.select",       # adds a line range selection button to code blocks
+  "content.footnote.tooltips", # renders footnotes as inline tooltips
+  "content.tabs.link",         # syncs all content tabs with the same label
+  "content.tooltips",          # enables tooltips on links
+  # "header.autohide",                 # hides header when scrolling down
+  # "navigation.expand",               # expands all nav sections by default
+  # "navigation.footer",               # adds prev/next page links in footer
+  # "navigation.indexes",              # attaches index.md to section headers
+  "navigation.instant",          # enables instant navigation via XHR
+  "navigation.instant.prefetch", # prefetches pages on link hover
+  "navigation.instant.progress", # shows progress bar on slow connections
+  "navigation.path",             # shows breadcrumb above page title
+  # "navigation.prune",                # only renders visible nav items (reduces size)
+  # "navigation.sections",             # renders top-level sections as flat groups
+  # "navigation.tabs",                 # renders top-level sections as header tabs
+  # "navigation.tabs.sticky",          # keeps tabs visible while scrolling
+  "navigation.top",      # shows back-to-top button
+  "navigation.tracking", # updates URL with active anchor
+  "search.highlight",    # highlights search terms after following result
+  "search.share",        # adds a share button to search results
+  "search.suggest",      # shows search suggestions while typing
+  "toc.follow",          # auto-scrolls TOC to active anchor
+  # "toc.integrate",
+  "content.footnote.tooltips", # moves TOC into the left navigation sidebar
 ]
 
 [project.theme.icon]
@@ -154,7 +207,7 @@ pymdownx.blocks.caption = {}
 [project.markdown_extensions.pymdownx.details]
 [project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
 [project.markdown_extensions.pymdownx.arithmatex]
 generic = true
@@ -164,7 +217,6 @@ alternate_style = true
 
 [project.markdown_extensions.toc]
 toc_depth = 1
-
 
 
 [[project.extra.social]]
