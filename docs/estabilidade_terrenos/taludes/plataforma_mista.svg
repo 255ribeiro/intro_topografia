@@ -102,24 +102,22 @@
      stroke-width="1"
      id="polygon1" />
   <!-- Terreno natural (lado direito — mais baixo, abaixo do aterro) -->
-  <!-- Região do terreno natural à direita, abaixo do talude de aterro -->
+  <!-- Começa no nível do terreno em x=480 (y≈253) e segue até a borda direita -->
   <polygon
-     points="595,290 720,330 720,350 480,350 480,210 595,290"
+     points="480,253 595,290 720,330 720,350 480,350"
      fill="#97C459"
      fill-opacity="0.38"
      stroke="#639922"
      stroke-width="1"
      id="polygon2" />
-  <!-- Material de aterro (lado direito — preenchimento) -->
+  <!-- Material de aterro (triângulo entre plataforma e terreno natural, até o pé) -->
   <polygon
-     points="595,350 480,350 480,210 595,290 "
-     fill="#ef9f27"
+     points="480,210 595,290 480,253"
+     fill="#EF9F27"
      fill-opacity="0.38"
-     stroke="#ba7517"
+     stroke="#BA7517"
      stroke-width="1"
-     id="polygon3"
-     inkscape:transform-center-x="-6.5862469"
-     inkscape:transform-center-y="-14.407649" />
+     id="polygon3" />
   <!-- Plataforma (superfície horizontal central) -->
   <rect
      x="220"
