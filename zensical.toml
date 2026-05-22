@@ -40,7 +40,7 @@ nav = [
     {"Definição" = "estabilidade_terrenos/"},
     {"Alternativas técnicas para estabilização de terrenos" = [
 
-      {"Tipos de Plataformas e Taludes" = "estabilidade_terrenos/taludes/"},
+      {"Taludes e plataforma" = "estabilidade_terrenos/taludes/"},
 
       {"Tratamento Superficial" = [
         {"Visão Geral" = "estabilidade_terrenos/tratamento_superficial/"},
