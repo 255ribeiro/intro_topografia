@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.3664839"
-     inkscape:cx="375.05016"
-     inkscape:cy="165.75387"
+     inkscape:zoom="0.96625003"
+     inkscape:cx="271.66881"
+     inkscape:cy="92.626129"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -309,32 +309,32 @@
      id="text15">LT = Linha de terra</text>
   <!-- H do corte -->
   <line
-     x1="155"
+     x1="199.64012"
      y1="135"
-     x2="155"
+     x2="199.64012"
      y2="208"
-     stroke="#378ADD"
+     stroke="#378add"
      stroke-width="1.5"
      marker-start="url(#arr)"
      marker-end="url(#arr)"
      id="line15" />
   <text
      font-family="sans-serif"
-     font-size="13"
+     font-size="13px"
      font-style="italic"
      font-weight="bold"
-     x="142"
-     y="178"
+     x="215.63496"
+     y="156.57092"
      text-anchor="end"
-     fill="#185FA5"
+     fill="#185fa5"
      id="text16">H</text>
   <text
      font-family="sans-serif"
-     font-size="10"
-     x="142"
-     y="190"
+     font-size="10px"
+     x="242.54312"
+     y="156.41051"
      text-anchor="end"
-     fill="#185FA5"
+     fill="#185fa5"
      id="text17">corte</text>
   <!-- H do aterro -->
   <line
@@ -365,18 +365,18 @@
      id="text19">aterro</text>
   <!-- Ângulo β corte no pé esquerdo (220,210) -->
   <path
-     d="M 172,210 A 48,48 0 0,0 181,184"
+     d="m 138.33696,154.74871 a 48,48 0 0 0 9,-26"
      fill="none"
-     stroke="#D85A30"
+     stroke="#d85a30"
      stroke-width="1.5"
      id="path19" />
   <text
      font-family="sans-serif"
-     font-size="13"
+     font-size="13px"
      font-style="italic"
-     x="157"
-     y="204"
-     fill="#993C1D"
+     x="133.42752"
+     y="142.79787"
+     fill="#993c1d"
      id="text20">β</text>
   <!-- Ângulo β aterro no crista direita (480,210) -->
   <path
@@ -398,8 +398,8 @@
      font-family="sans-serif"
      font-size="12px"
      font-weight="500"
-     x="187.93123"
-     y="132.81104"
+     x="130.16432"
+     y="179.52547"
      text-anchor="middle"
      fill="#3b6d11"
      id="text22">Talude</text>
@@ -407,8 +407,8 @@
      font-family="sans-serif"
      font-size="12px"
      font-weight="500"
-     x="187.93123"
-     y="147.81104"
+     x="130.16432"
+     y="194.52547"
      text-anchor="middle"
      fill="#3b6d11"
      id="text23">de corte</text>
@@ -444,11 +444,11 @@
   <!-- Rótulos laterais -->
   <text
      font-family="sans-serif"
-     font-size="11"
-     x="30"
-     y="160"
+     font-size="11px"
+     x="34.390831"
+     y="133.28911"
      text-anchor="middle"
-     fill="#3B6D11"
+     fill="#3b6d11"
      id="text27">Encosta</text>
   <text
      font-family="sans-serif"

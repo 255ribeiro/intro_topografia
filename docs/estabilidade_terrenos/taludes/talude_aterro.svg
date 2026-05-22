@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.1367647"
-     inkscape:cx="308.33118"
-     inkscape:cy="215.08409"
+     inkscape:zoom="1.6076281"
+     inkscape:cx="209.93662"
+     inkscape:cy="146.48911"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -188,7 +188,7 @@
   <!-- Ângulo β no pé do talude -->
   <!-- Pé em (120,250); arco de horizontal direito até a direção do talude (sobe direita) -->
   <path
-     d="m 183.75262,243.85119 a 55.542523,55.542523 0 0 1 -9.61313,-32.04376"
+     d="M 332.64007,105.73993 A 55.542523,55.542523 0 0 1 323.02694,73.696174"
      fill="none"
      stroke="#d85a30"
      stroke-width="1.5"
@@ -197,8 +197,8 @@
      font-family="sans-serif"
      font-size="14.9538px"
      font-style="italic"
-     x="190.16136"
-     y="229.96556"
+     x="310.58807"
+     y="97.843681"
      fill="#993c1d"
      id="text8"
      style="stroke-width:1.06813">β</text>
