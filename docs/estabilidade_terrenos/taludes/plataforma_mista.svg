@@ -21,8 +21,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.3664839"
-     inkscape:cx="318.33526"
-     inkscape:cy="243.32523"
+     inkscape:cx="375.05016"
+     inkscape:cy="165.75387"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -215,6 +215,23 @@
      text-anchor="middle"
      fill="#888780"
      id="text10">(corte)</text>
+  <text
+     font-family="sans-serif"
+     font-size="12px"
+     font-weight="500"
+     x="235.57867"
+     y="203.58492"
+     text-anchor="middle"
+     fill="#3b6d11"
+     id="text9-9">Pé</text>
+  <text
+     font-family="sans-serif"
+     font-size="11px"
+     x="262.24881"
+     y="202.57845"
+     text-anchor="middle"
+     fill="#888780"
+     id="text10-4">(corte)</text>
   <!-- Pé do aterro -->
   <circle
      cx="595"
@@ -237,6 +254,21 @@
      y="289.75549"
      fill="#888780"
      id="text12">(aterro)</text>
+  <text
+     font-family="sans-serif"
+     font-size="12px"
+     font-weight="500"
+     x="481.21078"
+     y="203.22984"
+     fill="#854f0b"
+     id="text11-8">Crista</text>
+  <text
+     font-family="sans-serif"
+     font-size="11px"
+     x="515.573"
+     y="202.03448"
+     fill="#888780"
+     id="text12-2">(aterro)</text>
   <!-- Linha de terra (esquerda) — onde o greide cruza o terreno no lado do corte -->
   <circle
      cx="220"
@@ -246,11 +278,11 @@
      id="circle12" />
   <text
      font-family="sans-serif"
-     font-size="11"
-     x="216"
-     y="200"
+     font-size="11px"
+     x="218.74428"
+     y="198.62787"
      text-anchor="end"
-     fill="#3B6D11"
+     fill="#3b6d11"
      id="text13">LT</text>
   <!-- Linha de terra (direita) — onde o greide cruza o terreno no lado do aterro -->
   <circle
@@ -261,10 +293,10 @@
      id="circle13" />
   <text
      font-family="sans-serif"
-     font-size="11"
-     x="484"
-     y="200"
-     fill="#854F0B"
+     font-size="11px"
+     x="483.27295"
+     y="231.2923"
+     fill="#854f0b"
      id="text14">LT</text>
   <!-- Legenda LT -->
   <text
@@ -348,9 +380,9 @@
      id="text20">β</text>
   <!-- Ângulo β aterro no crista direita (480,210) -->
   <path
-     d="M 528,210 A 48,48 0 0,1 519,236"
+     d="m 528.25873,210.25873 a 48,48 0 0 1 -9,26"
      fill="none"
-     stroke="#D85A30"
+     stroke="#d85a30"
      stroke-width="1.5"
      id="path20" />
   <text
@@ -385,8 +417,8 @@
      font-family="sans-serif"
      font-size="12px"
      font-weight="500"
-     x="545.93011"
-     y="188.21216"
+     x="587.586"
+     y="213.56792"
      text-anchor="middle"
      fill="#854f0b"
      id="text24">Talude</text>
@@ -394,8 +426,8 @@
      font-family="sans-serif"
      font-size="12px"
      font-weight="500"
-     x="545.93011"
-     y="202.21216"
+     x="587.586"
+     y="227.56792"
      text-anchor="middle"
      fill="#854f0b"
      id="text25">de aterro</text>
