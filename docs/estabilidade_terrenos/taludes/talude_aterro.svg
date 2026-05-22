@@ -1,0 +1,66 @@
+<svg width="620" height="340" viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
+  <title>Talude de aterro — seção transversal típica</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 5 L10 5 M0 2 L0 8 M10 2 L10 8" fill="none" stroke="context-stroke" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Terreno natural (base) -->
+  <rect x="0" y="250" width="620" height="40" fill="#97C459" fill-opacity="0.40" stroke="#639922" stroke-width="1"/>
+  <line x1="0" y1="250" x2="620" y2="250" stroke="#3B6D11" stroke-width="2"/>
+
+  <!-- Solo de fundação -->
+  <rect x="0" y="290" width="620" height="50" fill="#97C459" fill-opacity="0.20" stroke="#639922" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="11" x="310" y="318" text-anchor="middle" fill="#3B6D11">Solo de fundação</text>
+
+  <!-- Aterro (material compactado) -->
+  <polygon points="120,250 360,90 580,90 580,250" fill="#EF9F27" fill-opacity="0.40" stroke="#BA7517" stroke-width="1"/>
+
+  <!-- Plataforma (topo do aterro) -->
+  <line x1="360" y1="90" x2="580" y2="90" stroke="#BA7517" stroke-width="2.5"/>
+
+  <!-- Face do talude de aterro -->
+  <line x1="120" y1="250" x2="360" y2="90" stroke="#854F0B" stroke-width="3"/>
+
+  <!-- Nível original do terreno (tracejado — continuação à esquerda) -->
+  <line x1="0" y1="250" x2="120" y2="250" stroke="#3B6D11" stroke-width="2"/>
+  <line x1="0" y1="90" x2="345" y2="90" stroke="#888780" stroke-width="1.5" stroke-dasharray="10 5"/>
+  <text font-family="sans-serif" font-size="10" x="12" y="86" fill="#888780">Nível da plataforma</text>
+
+  <!-- Cota H (vertical) -->
+  <line x1="80" y1="92" x2="80" y2="248" stroke="#378ADD" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" x="62" y="177" text-anchor="end" fill="#185FA5">H</text>
+
+  <!-- Distância L (horizontal) -->
+  <line x1="122" y1="268" x2="358" y2="268" stroke="#378ADD" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" x="240" y="285" text-anchor="middle" fill="#185FA5">L</text>
+
+  <!-- Ângulo β no pé do talude -->
+  <!-- Pé em (120,250); arco de horizontal direito até a direção do talude (sobe direita) -->
+  <path d="M 172,250 A 52,52 0 0,1 163,220" fill="none" stroke="#D85A30" stroke-width="1.5"/>
+  <text font-family="sans-serif" font-size="14" font-style="italic" x="178" y="237" fill="#993C1D">β</text>
+
+  <!-- Pé do talude -->
+  <circle cx="120" cy="250" r="4" fill="#854F0B"/>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="132" y="244" fill="#854F0B">Pé</text>
+
+  <!-- Crista -->
+  <circle cx="360" cy="90" r="4" fill="#854F0B"/>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="360" y="77" text-anchor="middle" fill="#854F0B">Crista</text>
+
+  <!-- Rótulo Talude de aterro -->
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="218" y="186" text-anchor="middle" fill="#854F0B">Talude</text>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="218" y="200" text-anchor="middle" fill="#854F0B">de aterro</text>
+
+  <!-- Rótulo Aterro -->
+  <text font-family="sans-serif" font-size="13" font-weight="500" x="470" y="180" text-anchor="middle" fill="#854F0B">Aterro</text>
+  <text font-family="sans-serif" font-size="11" x="470" y="194" text-anchor="middle" fill="#854F0B">compactado</text>
+
+  <!-- Rótulo Plataforma -->
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="470" y="78" text-anchor="middle" fill="#854F0B">Plataforma</text>
+
+  <!-- Rótulo Terreno natural -->
+  <text font-family="sans-serif" font-size="12" x="42" y="240" text-anchor="middle" fill="#3B6D11">Terreno</text>
+  <text font-family="sans-serif" font-size="12" x="42" y="254" text-anchor="middle" fill="#3B6D11">natural</text>
+</svg>

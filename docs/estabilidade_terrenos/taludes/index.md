@@ -32,6 +32,8 @@ Os métodos de análise mais comuns são:
 
 ## Taludes de Corte
 
+![Seção transversal de um talude de corte](talude_corte.svg)
+
 Taludes de corte são formados pela **remoção de material** do terreno natural para abrir uma passagem ou criar uma plataforma. Sua estabilidade é condicionada pelas propriedades do material original — solo ou rocha — e pela geologia local.
 
 ### Inclinações Típicas
@@ -71,6 +73,8 @@ Onde $c$ é a coesão e $\varphi$ o ângulo de atrito interno.
 
 ## Taludes de Aterro
 
+![Seção transversal de um talude de aterro](talude_aterro.svg)
+
 Taludes de aterro resultam da **deposição e compactação controlada** de material para elevar o terreno natural ou criar plataformas. Sua estabilidade depende da qualidade do material depositado e do grau de compactação atingido.
 
 ### Requisitos de Compactação
@@ -105,6 +109,8 @@ $$\beta_{max} = \varphi$$
 ---
 
 ## Plataformas Mistas
+
+![Seção transversal de uma plataforma mista com talude de corte e de aterro](plataforma_mista.svg)
 
 Em obras de terraplenagem — rodovias, ferrovias, aeroportos e loteamentos — a plataforma de trabalho raramente é obtida por puro corte ou puro aterro. Na maioria das situações, o greide de projeto cruza o terreno natural, gerando simultaneamente uma **área de corte** e uma **área de aterro** separadas pela linha de terra (nível zero).
 

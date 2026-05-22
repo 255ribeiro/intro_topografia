@@ -1,0 +1,63 @@
+<svg width="620" height="340" viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
+  <title>Talude de corte — seção transversal típica</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 5 L10 5 M0 2 L0 8 M10 2 L10 8" fill="none" stroke="context-stroke" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Solo de fundação -->
+  <rect x="0" y="290" width="620" height="50" fill="#97C459" fill-opacity="0.20" stroke="#639922" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="11" x="310" y="318" text-anchor="middle" fill="#3B6D11">Solo de fundação</text>
+
+  <!-- Terreno natural remanescente (esquerda) + rampa de corte -->
+  <polygon points="0,90 120,90 360,250 360,290 0,290" fill="#97C459" fill-opacity="0.40" stroke="#639922" stroke-width="1"/>
+
+  <!-- Plataforma (direita) -->
+  <polygon points="360,250 580,250 580,290 360,290" fill="#97C459" fill-opacity="0.40" stroke="#639922" stroke-width="1"/>
+
+  <!-- Superfície do talude (face de corte) -->
+  <line x1="120" y1="90" x2="360" y2="250" stroke="#3B6D11" stroke-width="3"/>
+
+  <!-- Superfície do terreno natural (esquerda) -->
+  <line x1="0" y1="90" x2="120" y2="90" stroke="#3B6D11" stroke-width="2"/>
+
+  <!-- Nível original do terreno (tracejado) -->
+  <line x1="120" y1="90" x2="590" y2="90" stroke="#888780" stroke-width="1.5" stroke-dasharray="10 5"/>
+  <text font-family="sans-serif" font-size="10" x="588" y="87" text-anchor="end" fill="#888780">Nível original</text>
+
+  <!-- Superfície da plataforma -->
+  <line x1="360" y1="250" x2="580" y2="250" stroke="#3B6D11" stroke-width="2"/>
+
+  <!-- Cota H (vertical) -->
+  <line x1="500" y1="92" x2="500" y2="248" stroke="#378ADD" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" x="513" y="177" fill="#185FA5">H</text>
+
+  <!-- Distância L (horizontal) -->
+  <line x1="122" y1="270" x2="358" y2="270" stroke="#378ADD" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" x="240" y="287" text-anchor="middle" fill="#185FA5">L</text>
+
+  <!-- Ângulo β no pé do talude -->
+  <!-- Pé em (360,250); arco de horizontal esquerdo até a direção do talude -->
+  <path d="M 308,250 A 52,52 0 0,0 317,220" fill="none" stroke="#D85A30" stroke-width="1.5"/>
+  <text font-family="sans-serif" font-size="14" font-style="italic" x="284" y="242" fill="#993C1D">β</text>
+
+  <!-- Crista -->
+  <circle cx="120" cy="90" r="4" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="120" y="76" text-anchor="middle" fill="#3B6D11">Crista</text>
+
+  <!-- Pé do talude -->
+  <circle cx="360" cy="250" r="4" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="350" y="242" text-anchor="end" fill="#3B6D11">Pé</text>
+
+  <!-- Rótulo Talude de corte -->
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="200" y="188" text-anchor="middle" fill="#3B6D11">Talude</text>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="200" y="202" text-anchor="middle" fill="#3B6D11">de corte</text>
+
+  <!-- Rótulo Terreno natural -->
+  <text font-family="sans-serif" font-size="12" x="42" y="160" text-anchor="middle" fill="#3B6D11">Terreno</text>
+  <text font-family="sans-serif" font-size="12" x="42" y="174" text-anchor="middle" fill="#3B6D11">natural</text>
+
+  <!-- Rótulo Plataforma -->
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="470" y="237" text-anchor="middle" fill="#3B6D11">Plataforma</text>
+</svg>

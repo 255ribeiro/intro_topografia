@@ -1,0 +1,109 @@
+<svg width="720" height="400" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg">
+  <title>Plataforma mista — talude de corte e talude de aterro simultâneos</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 5 L10 5 M0 2 L0 8 M10 2 L10 8" fill="none" stroke="context-stroke" stroke-width="1.5"/>
+    </marker>
+    <!-- Hachura para indicar material escavado (corte) -->
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#639922" stroke-width="0.8" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- ============================================================
+       Geometria calculada com terrain slope = (330-100)/720 per x
+       Terrain: from (0,100) to (720,330) → y = 100 + 0.319·x
+       Platform: y=210, x=220 to x=480
+       Crista corte (interseção talude corte c/ terreno): (104, 133)
+       Pé aterro (interseção talude aterro c/ terreno): (595, 290)
+       ============================================================ -->
+
+  <!-- Solo de fundação -->
+  <rect x="0" y="350" width="720" height="50" fill="#97C459" fill-opacity="0.18" stroke="#639922" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="11" x="360" y="378" text-anchor="middle" fill="#3B6D11">Solo de fundação</text>
+
+  <!-- Terreno natural (lado esquerdo — mais alto, será escavado) -->
+  <!-- Poligono do terreno remanescente esquerdo: vai da borda até a crista -->
+  <polygon points="0,100 104,133 220,210 220,350 0,350" fill="#97C459" fill-opacity="0.38" stroke="#639922" stroke-width="1"/>
+
+  <!-- Terreno natural (lado direito — mais baixo, abaixo do aterro) -->
+  <!-- Região do terreno natural à direita, abaixo do talude de aterro -->
+  <polygon points="595,290 720,330 720,350 480,350 480,210 595,290" fill="#97C459" fill-opacity="0.38" stroke="#639922" stroke-width="1"/>
+
+  <!-- Material de aterro (lado direito — preenchimento) -->
+  <polygon points="480,210 595,290 595,350 480,350" fill="#EF9F27" fill-opacity="0.38" stroke="#BA7517" stroke-width="1"/>
+
+  <!-- Plataforma (superfície horizontal central) -->
+  <rect x="220" y="210" width="260" height="140" fill="#97C459" fill-opacity="0.25" stroke="none"/>
+  <line x1="220" y1="210" x2="480" y2="210" stroke="#3B6D11" stroke-width="2.5"/>
+
+  <!-- Face do talude de corte (esquerda) -->
+  <line x1="104" y1="133" x2="220" y2="210" stroke="#3B6D11" stroke-width="3"/>
+
+  <!-- Face do talude de aterro (direita) -->
+  <line x1="480" y1="210" x2="595" y2="290" stroke="#854F0B" stroke-width="3"/>
+
+  <!-- Linha do terreno natural (tracejada, contínua) -->
+  <line x1="0" y1="100" x2="104" y2="133" stroke="#3B6D11" stroke-width="2"/>
+  <line x1="104" y1="133" x2="595" y2="290" stroke="#888780" stroke-width="1.5" stroke-dasharray="10 5"/>
+  <line x1="595" y1="290" x2="720" y2="330" stroke="#3B6D11" stroke-width="2"/>
+
+  <!-- Rótulo da linha de terreno natural -->
+  <text font-family="sans-serif" font-size="11" x="350" y="225" text-anchor="middle" fill="#888780" transform="rotate(18, 350, 225)">Terreno natural original</text>
+
+  <!-- ===== ANOTAÇÕES ===== -->
+
+  <!-- Crista do corte -->
+  <circle cx="104" cy="133" r="5" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="88" y="123" text-anchor="middle" fill="#3B6D11">Crista</text>
+  <text font-family="sans-serif" font-size="11" x="88" y="137" text-anchor="middle" fill="#888780">(corte)</text>
+
+  <!-- Pé do aterro -->
+  <circle cx="595" cy="290" r="5" fill="#854F0B"/>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="615" y="285" fill="#854F0B">Pé</text>
+  <text font-family="sans-serif" font-size="11" x="615" y="299" fill="#888780">(aterro)</text>
+
+  <!-- Linha de terra (esquerda) — onde o greide cruza o terreno no lado do corte -->
+  <circle cx="220" cy="210" r="5" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="11" x="216" y="200" text-anchor="end" fill="#3B6D11">LT</text>
+
+  <!-- Linha de terra (direita) — onde o greide cruza o terreno no lado do aterro -->
+  <circle cx="480" cy="210" r="5" fill="#854F0B"/>
+  <text font-family="sans-serif" font-size="11" x="484" y="200" fill="#854F0B">LT</text>
+
+  <!-- Legenda LT -->
+  <text font-family="sans-serif" font-size="10" x="350" y="200" text-anchor="middle" fill="#555">LT = Linha de terra</text>
+
+  <!-- H do corte -->
+  <line x1="155" y1="135" x2="155" y2="208" stroke="#378ADD" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text font-family="sans-serif" font-size="13" font-style="italic" font-weight="bold" x="142" y="178" text-anchor="end" fill="#185FA5">H</text>
+  <text font-family="sans-serif" font-size="10" x="142" y="190" text-anchor="end" fill="#185FA5">corte</text>
+
+  <!-- H do aterro -->
+  <line x1="555" y1="212" x2="555" y2="288" stroke="#378ADD" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text font-family="sans-serif" font-size="13" font-style="italic" font-weight="bold" x="568" y="255" fill="#185FA5">H</text>
+  <text font-family="sans-serif" font-size="10" x="568" y="267" fill="#185FA5">aterro</text>
+
+  <!-- Ângulo β corte no pé esquerdo (220,210) -->
+  <path d="M 172,210 A 48,48 0 0,0 181,184" fill="none" stroke="#D85A30" stroke-width="1.5"/>
+  <text font-family="sans-serif" font-size="13" font-style="italic" x="157" y="204" fill="#993C1D">β</text>
+
+  <!-- Ângulo β aterro no crista direita (480,210) -->
+  <path d="M 528,210 A 48,48 0 0,1 519,236" fill="none" stroke="#D85A30" stroke-width="1.5"/>
+  <text font-family="sans-serif" font-size="13" font-style="italic" x="532" y="228" fill="#993C1D">β</text>
+
+  <!-- Rótulo Talude de corte -->
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="155" y="178" text-anchor="middle" fill="#3B6D11">Talude</text>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="155" y="193" text-anchor="middle" fill="#3B6D11">de corte</text>
+
+  <!-- Rótulo Talude de aterro -->
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="548" y="256" text-anchor="middle" fill="#854F0B">Talude</text>
+  <text font-family="sans-serif" font-size="12" font-weight="500" x="548" y="270" text-anchor="middle" fill="#854F0B">de aterro</text>
+
+  <!-- Rótulo Plataforma -->
+  <text font-family="sans-serif" font-size="13" font-weight="500" x="350" y="280" text-anchor="middle" fill="#3B6D11">Plataforma</text>
+
+  <!-- Rótulos laterais -->
+  <text font-family="sans-serif" font-size="11" x="30" y="160" text-anchor="middle" fill="#3B6D11">Encosta</text>
+  <text font-family="sans-serif" font-size="11" x="690" y="310" text-anchor="middle" fill="#3B6D11">Vale</text>
+</svg>
