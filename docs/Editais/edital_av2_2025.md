@@ -53,6 +53,8 @@ O trabalho consiste na implantação de ao menos dois platôs planos, com cotas 
 
 O terreno pode ser o mesmo Obtido na Avaliação 01.
 
+Deve-se apresentar uma planta como descritivo planimétrico do terreno (recomenda-se o uso do plug-in LfTool do Qgis e a criação do mapa no Layout do Qgis)
+
 Deve-se propor também a estratégia de estabilização dos platos, justificando a escolha. Caso a opção seja por uma solução seja por uma estrutura de contenção, esta deve ser pré-dimensionada, caso seja um talude, deve ser devidamente representado. Em ambos os casos as curvas de nível devem ser adequadamente alteradas para representar a proposta.
 
 Os trechos das Curvas de nível alteradas devem ser representadas tracejadas em planta e o perfil original do terreno deve ser representado nos perfis topográficos. Cotas de nível em planta e em corte devem ser utilizados nos desenhos. Os platôs devem ser cotados em planta e os desníveis devem ser cotados no corte. As dimensões das estruturas de contenção devem ser cotadas em corte e em planta.
@@ -76,6 +78,6 @@ Itens da entrega
  Os trabalhos devem ser enviados em arquivo compactado (.zip, .rar, .7z, .tar.gz) pelo Canvas da disciplina em atividade adequada.
 
 <h4 style="background:Silver; text-align: center;"> Data de entrega</h4>
-   dia 10/01/2026 em tarefa aberta no ambiente virtual da disciplina.
+   consulte o cronograma da disciplina
 
 -----
