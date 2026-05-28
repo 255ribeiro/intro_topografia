@@ -76,7 +76,7 @@ Itens da entrega
    1. A justificativa das soluções de estabilização escolhidas.
    2. A memória de cálculo do pré-dimensionamento.
 
- Os trabalhos devem ser enviados em arquivo compactado (.zip, .rar, .7z, .tar.gz) pelo Canvas da disciplina em atividade adequada.
+ Os trabalhos devem ser enviados em arquivo compactado (.zip, .rar, .7z, .tar.gz) pelo AVA da disciplina em atividade adequada.
 
 <h4 style="background:Silver; text-align: center;"> Data de entrega</h4>
    consulte o cronograma da disciplina
