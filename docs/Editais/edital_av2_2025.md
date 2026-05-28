@@ -66,10 +66,11 @@ Itens da entrega
 </h4>
 
 1. Arquivos PDF contendo as seguintes plantas:
-   1. Plantas de situação apresentando as curvas de nível:
+   1. Planta descritiva de planimetria
+   2. Plantas de situação apresentando as curvas de nível:
       1. Planta de situação do terreno original
       2. Planta de situação com a intervenção de terraplenagem indicada
-   2. Perfil(is) topográficos longitudinal(is) passando por todos os platôs, contendo o perfil original do terreno (em linha tracejada) e solução de estabilização cotada de acordo com pré-dimensionamento.
+   3. Perfil(is) topográficos longitudinal(is) passando por todos os platôs, contendo o perfil original do terreno (em linha tracejada) e solução de estabilização cotada de acordo com pré-dimensionamento.
 
 2. Dossiê em arquivo PDF contendo:
    1. A justificativa das soluções de estabilização escolhidas.
