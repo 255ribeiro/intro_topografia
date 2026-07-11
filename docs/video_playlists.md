@@ -2,7 +2,7 @@
 
 ## 2026.1
 
-[Materiais de estudo e aulas gravadas](https://www.youtube.com/playlist?list=PLdvIeM1XzOJCx1rXli9RuDFc0re9-Htsl)
+[Materiais de estudo e aulas gravadas](https://www.youtube.com/watch?v=E5oui9HujCo&list=PLdvIeM1XzOJCx1rXli9RuDFc0re9-Htsl)
 
 ## Tutoriais de Layout do Qgis
 
