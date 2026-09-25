@@ -6,7 +6,7 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
 
 - **Disciplina:** Introduçao a Topografia
 - **Avaliação:** Av1
-- **Data de entrega:** 07/05/2026
+- **Data de entrega:** 15/10/2026
 
 ## Conteúdo Avaliado
 
@@ -40,7 +40,7 @@ Bem-vindo ao edital da Avaliação 1 (Av1) da Introdução à topografia
   <!-- - Servidores com imagens MDT para a região de Salvador -->
 - Crie um projeto no Qgis, carregue um mapa do Google para referência.
 - Escolha um terreno em Salvador que atenda ao critério:
-  - desnível >= 8 m
+      desnível >= 8 m
   - Crie uma camada de pontos e marque um ponto dentro da poligonal do terreno escolhido.
   - Baixe os dados da prefeitura de Salvador relativos ao seu terreno e entorno
 - Recorte as camadas e salve em disco na pasta adequada
