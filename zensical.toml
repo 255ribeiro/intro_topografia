@@ -33,6 +33,7 @@ nav = [
 
     { "Azimute e Rumo" = "topografia/azimute_rumo.md" },
     { "Exercícios" = "topografia/exercicios_topografia.md" },
+    {"Civil Craft" = "/civilcraft/guia_export.md"},
   ] },
 
   { "Estabilidade de terrenos" = [

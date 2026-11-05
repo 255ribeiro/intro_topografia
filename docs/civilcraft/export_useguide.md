@@ -1,5 +1,8 @@
 # QGIS → CivilCraft: Layer Transfer Guide
 
+[CadCraft Studio](https://getcadcraft.com/great-eight)
+
+
 ## Overview
 
 CivilCraft (open-source, Apache-2.0) supports the following **import** formats:
